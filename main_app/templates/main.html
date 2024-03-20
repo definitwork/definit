@@ -9,7 +9,27 @@
 </head>
 <body>
     <div class="wrapper">
+        <header>
+            <div class="container">
+                <div class="header__wrapper">
 
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="wrapper">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </main>
+        <footer>
+            <div class="container">
+                <div class="footer__wrapper">
+                    
+                </div>
+            </div>
+        </footer>
     </div>
+    {% block js %}{% endblock %}
 </body>
 </html>
