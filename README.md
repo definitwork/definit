@@ -3,8 +3,8 @@
 Для БД
 ```SQL
 CREATE USER definituser WITH PASSWORD 'definitpass';
-ALTER ROLE definituser WITH CREATEDB;
-CREATE DATABASE definitdb WITH OWNER definituser;
+    ALTER ROLE definituser WITH CREATEDB;
+    CREATE DATABASE definitdb WITH OWNER definituser;
 ```
 Зависимости
 ```SH
