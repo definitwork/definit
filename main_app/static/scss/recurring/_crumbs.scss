@@ -1,0 +1,19 @@
+.crumbs__nav-list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.crumbs__nav-list-item {
+  & a {
+    color: rgb(245, 245, 245);
+    font-family: Nunito;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 19px;
+  }
+}
+
+.crumbs__nav-list-item-arrow {
+    
+}
