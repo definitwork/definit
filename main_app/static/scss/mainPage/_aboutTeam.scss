@@ -1,0 +1,119 @@
+$commentListItemCount: 3;
+$bottom: -10;
+$top: 20;
+
+.about__team {
+  padding-top: 76px;
+  position: relative;
+}
+
+.about__team-title {
+  color: rgb(245, 245, 245);
+  font-family: Nunito;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 35px;
+  text-align: center;
+  margin-bottom: 44px;
+}
+
+.about__team-comment-list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+}
+
+.about__team-comment-list-item {
+  border-radius: 10px;
+  background: rgb(70, 79, 119);
+  padding: 15px 24px;
+  position: relative;
+  max-width: 284px;
+  color: rgb(245, 245, 245);
+  font-family: Nunito;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: center;
+  width: 100%;
+}
+
+.bg__lines {
+  position: absolute;
+  top: 25px;
+  right: 0;
+
+  & img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@for $commentListItemCount from 1 through $commentListItemCount {
+  $bottom: $bottom + 10;
+  .comment-list-item-#{$commentListItemCount} {
+    bottom: #{$bottom}px;
+    @if $commentListItemCount % 2 == 0 {
+      left: 35px;
+      background: rgb(49, 56, 85);
+    } @else {
+      background: rgb(70, 79, 119);
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .about__team {
+    padding-top: 112px;
+    padding-bottom: 180px;
+  }
+  .bg__lines {
+    width: 416px;
+  }
+
+  .about__team-title {
+    font-family: Nunito;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 65px;
+    margin-bottom: 70px;
+  }
+
+  .about__team-comment-list {
+    display: flex;
+    flex-direction: initial;
+    align-items: initial;
+    overflow: initial;
+  }
+
+  .about__team-comment-list-item {
+    max-width: 424px;
+    flex: 0 1 424px;
+    padding: 45px 17px 32px 17px;
+    color: rgb(245, 245, 245);
+    font-family: Nunito;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+  }
+  @for $commentListItemCount from 1 through $commentListItemCount {
+    $top: $top + 10;
+    .comment-list-item-#{$commentListItemCount} {
+      bottom: initial;
+      left: initial;
+
+      @if $commentListItemCount == 1 {
+        top: 0px;
+      } @else {
+        left: -20px;
+        @if $commentListItemCount % 2 == 1 {
+          left: -30px;
+        }
+        top: #{$top * $commentListItemCount}px;
+      }
+    }
+  }
+}

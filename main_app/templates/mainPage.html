@@ -1,0 +1,180 @@
+{% extends 'baseTemplate.html' %} {% load static %} {% block title %} Главная страница {% endblock %} 
+{% block content %}
+<section class="about__company">
+  <div class="container">
+    <div class="about__company-wrap">
+      <h1 class="about__company-title">Создаем веб-решения, которые вдохнут жизнь в ваш бизнес</h1>
+      <div class="about__company-expertise-wrap">
+        <ul class="about__company-expertise">
+          {% for decision in decisions %}
+          <li class="about__company-expertise-item">{{ decision }}</li>
+          {% endfor %}
+          <!-- <li class="about__company-expertise-item">разработка под ключ</li> -->
+          <!-- <li class="about__company-expertise-item">разработка сайтов-визиток</li> -->
+        </ul>
+        <button type="button" class="about__company-order">Заказать разработку</button>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="about__team">
+  <div class="container">
+    <div class="about__team-wrap">
+      <div class="bg__lines">
+        <img src="{% static 'img/icons/bgLines.svg' %}" alt="" />
+      </div>
+      <h2 class="about__team-title">DEFINIT TECHNOLOGIES</h2>
+      <ul class="about__team-comment-list">
+        <li class="about__team-comment-list-item comment-list-item-1">
+          Мы - команда опытных и талантливых веб-разработчиков, стремящихся создать удивительные веб-решения для наших
+          клиентов.
+        </li>
+        <li class="about__team-comment-list-item comment-list-item-2">
+          Наша экспертиза включает различные аспекты веб-разработки, включая фронтенд и бэкенд разработку, создание
+          пользовательского интерфейса, оптимизацию для поисковых систем, интеграцию сторонних сервисов и многое другое.
+        </li>
+        <li class="about__team-comment-list-item comment-list-item-3">
+          Если вы ищете надежного партнера для разработки вашего веб-проекта, обратитесь к нам. Мы будем рады воплотить
+          ваше веб-видение в реальность и помочь вашему бизнесу достичь новых высот в онлайн-мире.
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section class="portfolio">
+  <div class="bg__lines">
+    <img src="{% static 'img/icons/bgLines.svg' %}" alt="lines" />
+  </div>
+  <div class="bg__lines">
+    <img src="{% static 'img/icons/bgLines.svg' %}" alt="lines" />
+  </div>
+  <div class="container">
+    <div class="portfolio__wrapper">
+      <h2 class="portfolio__title">Кейсы</h2>
+      <p class="portfolio__sub-title">
+        В нашем портфолио присутствуют разнообразные проекты, которые продемонстрируют нашу гибкость и способность
+        работать с различными тематиками и типами веб-разработки
+      </p>
+      <ul class="portfolio__list">
+        {% for project in projects %}
+        <li class="portfolio__list-item">
+          <div class="portfolio__list-item-img">
+            <img src="{{ project.image.url }}" alt="" />
+          </div>
+          <a href="{{ project.link }}" class="portfolio__list-item-link">
+            <h3 class="portfolio__list-item-title portfolio__title-card">{{ project.project_name }}</h3>
+          </a>
+          <div class="porfolio__list-item-description-wrap">
+            <div class="portfolio__list-item-description">
+              <h3 class="portfolio__list-item-description-title portfolio__title-card">Описание</h3>
+              <p class="portfolio__list-item-description-text">{{ project.description }}</p>
+            </div>
+            <div class="portfolio__list-item-description-results-list-wrap">
+              <h3 class="portfolio__list-item-description-results-list-title portfolio__title-card">Наш результат:</h3>
+              <ul class="portfolio__list-item-description-results-list">
+                {% for result in project.projectresults_set.all %}
+                <li class="portfolio__list-item-description-results-list-item">{{ result.result }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+      <a href="#" class="portfolio__link-all-projects">Показать еще</a>
+    </div>
+  </div>
+</section>
+<section class="contacts">
+  <div class="container">
+    <div class="contacts__wrapper">
+      <h2 class="contacts__title">Наши контакты</h2>
+      <div class="contacts__list-map-wrap">
+        <div class="contacts__list-wrap">
+          <ul class="contacts__list">
+            {% for contact in info_and_contacts %}
+            <li class="contacts__list-item">
+              <h3 class="contacts__list-item-title">Офис</h3>
+              <div class="contacts__list-item-wrap">
+                <div class="contacts__list-item-time contacts__info">
+                  <div class="contacts__list-item-time-img">
+                  <img src="{% static 'img/icons/clockIcon.svg' %}" alt="">
+                  </div>
+                  <p>
+                    {{ contact.opening_hours }}
+                  </p>
+                </div>
+                <div class="contacts__list-item-adress contacts__info">
+                  <div class="contacts__list-item-adress-img">
+                    <img src="{% static 'img/icons/locationIcon.svg' %}" alt="">
+                  </div>
+                  <p>
+                    {{ contact.address }}
+                  </p>
+                </div>
+                <div class="contacts__list-item-phone contacts__info">
+                  <div class="contacts__list-item-phone-img">
+                    <img src="{% static 'img/icons/phoneIcon.svg' %}" alt="">
+                  </div>
+                  <p>
+                    {{ contact.phone_number }}
+                  </p>
+                </div>
+                <div class="contacts__list-item-email contacts__info">
+                  <div class="contacts__list-item-email-img">
+                    <img src="{% static 'img/icons/mailIcon.svg' %}" alt="">
+                  </div>
+                  <p>
+                    {{ contact.email }}
+                  </p>
+                </div>
+              </div>
+            </li>
+            {% endfor %}
+          </ul>
+          <ul class="contacts__social-list">
+            <li class="contacts__social-list-item">
+              <a href="#">
+                <img src="{% static 'img/icons/viberIcon.svg' %}" alt="">
+              </a>
+            </li>
+            <li class="contacts__social-list-item">
+              <a href="#">
+                <img src="{% static 'img/icons/telegramIcon.svg' %}" alt="">
+              </a>
+            </li>
+            <li class="contacts__social-list-item">
+              <a href="#">
+                <img src="{% static 'img/icons/whatsappIcon.svg' %}" alt="whatsappIcon">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="contacts__list-map">
+          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad9325862c7c1f714f01612e6ece210cd00b887901095a5ac7c529c9d0569dddc&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+        </div>
+      </div>
+      <form class="contacts__form" method="POST">
+        <h3 class="contacts__form-title">
+          Свяжитесь с нами
+        </h3>
+        <div class="contacts__form-field-wrap">
+          <input type="text" name="name" placeholder="Ваше имя" class="contacts__form-field">
+          <input type="tel" name="phone" placeholder="Телефон" class="contacts__form-field">
+        </div>
+        <label class="contacts__form-personal-data">
+          <input type="checkbox" name="personalData" id="">
+          <div class="contacts__form-personal-data-checkbox">
+          </div>
+          <p>
+            Даю согласие на обработку персональных данных
+          </p>
+        </label>
+        <button class="contacts__form-btn">
+          Заказать звонок
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+{% endblock %}
