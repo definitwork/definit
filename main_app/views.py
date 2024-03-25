@@ -6,7 +6,7 @@ from main_app.models import CompanyInfoAndContacts, CompanyDecisions, AboutCompa
 
 def get_main_page(request):
     """ Главная страница """
-    info_and_contacts = CompanyInfoAndContacts.objects.first()
+    info_and_contacts = CompanyInfoAndContacts.objects.all()
     decisions = CompanyDecisions.objects.all()
     about_company = AboutCompany.objects.all()
     projects = CompanyProjects.objects.prefetch_related("projectresults_set")
@@ -16,7 +16,7 @@ def get_main_page(request):
         "about_company": about_company,
         "projects": projects
     }
-    return render(request, template_name='main.html', context=context)
+    return render(request, template_name='mainPage.html', context=context)
 
 
 def get_about_us_page(request):

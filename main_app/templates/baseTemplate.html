@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/null_for_templates.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/mainPage/style.css' %}" />
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="container">
+          <div class="header__wrapper">
+            <div class="header__mob-wrap">
+              <div class="logo">
+                <img src="{% static 'img/icons/logoIcon.svg' %}" alt="logoIcon" />
+              </div>
+              <nav class="header__nav">
+                <ul class="header__nav-list">
+                  <li class="header__nav-list-item">
+                    <a href="#"> О нас </a>
+                  </li>
+                  <li class="header__nav-list-item">
+                    <a href="#"> Портфолио </a>
+                  </li>
+                  <li class="header__nav-list-item">
+                    <a href="#"> Команда </a>
+                  </li>
+                  <li class="header__nav-list-item">
+                    <a href="#"> Блог </a>
+                  </li>
+                  <li class="header__nav-list-item nav__reels">
+                    <a href="#">
+                      <p>Reels</p>
+                      <div class="nav__reels-img">
+                        <img src="{% static 'img/icons/videoIcon.svg' %}" alt="" />
+                      </div>
+                    </a>
+                  </li>
+                  <li class="header__nav-list-item">
+                    <a href="#"> Контакты </a>
+                  </li>
+                </ul>
+              </nav>
+              <div class="header__reels-phone-wrap">
+                <div class="header__reels">
+                  <div class="header__reels-wrap">
+                    <img src="{% static 'img/icons/storiesLogo.svg' %}" alt="defINIT" />
+                  </div>
+                </div>
+                <a href="tel:+375291111111" class="header__phone">
+                  <div class="header__phone-img">
+                    <svg width="27.000000" height="24.000000" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <defs>
+                        <clipPath id="clip60_438">
+                          <rect id="material-symbols:call" width="26.828276" height="24.000000" transform="translate(-0.001221 0.000000)" fill="white" fill-opacity="0"/>
+                        </clipPath>
+                      </defs>
+                      <rect id="material-symbols:call" width="26.828276" height="24.000000" transform="translate(-0.001221 0.000000)" fill="#FFFFFF" fill-opacity="0"/>
+                      <g clip-path="url(#clip60_438)">
+                        <path id="Vector" d="M22.29 21C19.97 21 17.66 20.54 15.39 19.63C13.12 18.73 11.05 17.44 9.19 15.77C7.33 14.1 5.89 12.25 4.87 10.22C3.86 8.19 3.35 6.13 3.35 4.05C3.35 3.75 3.46 3.5 3.68 3.3C3.91 3.1 4.19 3 4.52 3L9.05 3C9.31 3 9.54 3.07 9.75 3.23C9.95 3.39 10.07 3.58 10.11 3.8L10.84 7.3C10.87 7.56 10.86 7.79 10.81 7.97C10.75 8.15 10.65 8.31 10.5 8.44L7.79 10.89C8.16 11.51 8.61 12.11 9.12 12.68C9.63 13.26 10.19 13.81 10.81 14.35C11.39 14.86 11.99 15.34 12.63 15.78C13.26 16.23 13.93 16.63 14.64 17L17.26 14.64C17.43 14.5 17.65 14.38 17.92 14.31C18.19 14.23 18.46 14.21 18.72 14.25L22.57 14.95C22.84 15.01 23.05 15.13 23.22 15.31C23.38 15.48 23.47 15.68 23.47 15.89L23.47 19.95C23.47 20.25 23.36 20.5 23.13 20.7C22.91 20.89 22.63 21 22.29 21Z" fill="#F5F5F5" fill-opacity="1.000000" fill-rule="nonzero"/>
+                      </g>
+                    </svg>
+                  </div>
+                  <p class="header__phone-text">
+                    +375291111111
+                  </p>
+                </a>
+              </div>
+            </div>
+            <div class="burger">
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main>{% block content %} {% endblock %}</main>
+      <footer>
+        <div class="container">
+          <div class="footer__wrapper">
+            <div class="footer__logo">
+              <svg width="100%" height="100%" viewBox="0 0 59 55" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs/>
+                <path id="Subtract 4" d="M26.23 31.21C33.21 30.83 38.75 25.05 38.75 17.97C38.75 10.89 33.21 5.11 26.23 4.73C25.82 4.71 25.49 5.04 25.49 5.45C25.49 5.85 25.82 6.18 26.23 6.21C32.4 6.59 37.28 11.71 37.28 17.97C37.28 24.23 32.4 29.36 26.23 29.74C25.82 29.76 25.49 30.09 25.49 30.49C25.49 30.9 25.82 31.23 26.23 31.21Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero"/>
+                <circle id="Ellipse 2" cx="25.497559" cy="17.975784" r="8.840524" fill="#FFFFFF" fill-opacity="1.000000"/>
+                <path id="Subtract 5" d="M7.53 18.71C7.92 28.29 15.81 35.95 25.49 35.95C35.42 35.95 43.47 27.9 43.47 17.97C43.47 8.29 35.82 0.4 26.23 0.01C25.82 -0.01 25.49 0.32 25.49 0.73C25.49 1.14 25.82 1.47 26.23 1.48C35 1.87 41.99 9.1 41.99 17.97C41.99 27.08 34.61 34.47 25.49 34.47C16.63 34.47 9.39 27.48 9.01 18.71C8.99 18.3 8.66 17.97 8.25 17.97C7.85 17.97 7.52 18.3 7.53 18.71Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero"/>
+                <path id="Subtract" d="M26.23 3.84C33.7 4.23 39.64 10.41 39.64 17.97C39.64 25.78 33.3 32.12 25.49 32.12C21.79 32.12 18.43 30.7 15.91 28.37C15.6 28.09 15.12 28.09 14.84 28.39C14.56 28.68 14.56 29.13 14.85 29.4C17.64 32 21.38 33.59 25.49 33.59C34.12 33.59 41.11 26.6 41.11 17.97C41.11 9.59 34.51 2.75 26.23 2.37C25.82 2.35 25.49 2.68 25.49 3.09C25.49 3.5 25.82 3.82 26.23 3.84Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero"/>
+                <path id="Union" d="M0 53.04L0 43.13L2.47 43.13Q4.94 43.13 6.22 44.36Q6.34 44.48 6.45 44.6Q7.51 45.81 7.51 47.95Q7.51 49.61 6.77 50.81L6.77 50.81Q6.5 51.25 6.13 51.63Q5.89 51.88 5.61 52.08Q4.33 53.04 2.33 53.04L0 53.04ZM8.25 53.04L8.25 43.13L12.88 43.13L12.88 43.76L8.94 43.76L8.94 47.73L12.6 47.73L12.6 47.74L14.05 47.74L14.05 43.13L18.68 43.13L18.68 43.76L14.74 43.76L14.74 47.74L16.2 47.74L16.2 48.36L14.74 48.36L14.74 53.04L14.05 53.04L14.05 48.36L12.24 48.36L12.24 48.36L8.94 48.36L8.94 52.42L13.11 52.42L13.11 53.04L8.25 53.04ZM31.16 43.13L31.84 43.13L31.84 53.04L31.16 53.04L31.16 43.13ZM40.12 53.04L34.22 45.03C34.1 44.87 34 44.71 33.91 44.55L33.82 44.41L33.79 44.41Q33.8 44.59 33.8 44.85L33.8 53.04L33.12 53.04L33.12 43.13L33.64 43.13L39.5 51.07C39.63 51.24 39.77 51.46 39.92 51.7L39.96 51.7C39.93 51.38 39.92 51.11 39.92 50.88L39.92 43.13L40.6 43.13L40.6 53.04L40.12 53.04ZM41.87 43.13L42.56 43.13L42.56 53.04L41.87 53.04L41.87 43.13ZM46.52 43.76L46.52 53.04L45.84 53.04L45.84 43.76L42.98 43.76L42.98 43.13L49.38 43.13L49.38 43.76L46.52 43.76ZM0.68 43.76L0.68 52.42L2.23 52.42Q4.35 52.42 5.52 51.36L5.52 51.36Q5.57 51.32 5.62 51.28Q5.73 51.16 5.84 51.04L5.84 51.04Q6.8 49.92 6.8 47.98Q6.8 45.97 5.8 44.92Q4.69 43.76 2.37 43.76L0.68 43.76ZM20.69 54.89L20.69 54.27L25.49 54.27L25.49 54.89L20.69 54.89ZM26.38 54.89L26.38 54.27L31.16 54.27L31.16 54.89L26.38 54.89ZM48.53 54.27L53.28 54.27L53.28 54.89L48.53 54.89L48.53 54.27ZM54.17 54.89L54.17 54.27L59 54.27L59 54.89L54.17 54.89Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+              </svg>
+              
+            </div>
+            <nav class="footer__nav">
+              <ul class="footer__nav-list">
+                <li class="footer__nav-list-item">
+                  <a href="#">
+                    О нас
+                  </a>
+                </li>
+                <li class="footer__nav-list-item">
+                  <a href="#">
+                    Портфолио
+                  </a>
+                </li>
+              </ul>
+              <ul class="footer__nav-list">
+                <li class="footer__nav-list-item">
+                  <a href="#">
+                    Команда
+                  </a>
+                </li>
+                <li class="footer__nav-list-item">
+                  <a href="#">
+                    Блог
+                  </a>
+                </li>
+              </ul>
+              <ul class="footer__nav-list">
+                <li class="footer__nav-list-item nav__reels">
+                  <a href="#">
+                    <p>
+                      Reels 
+                    </p>
+                    <div class="footer__nav-reels-img">
+                      <img src="{% static 'img/icons/videoIcon.svg' %}" alt="videoIcon">
+                    </div>
+                  </a>
+                </li>
+                <li class="footer__nav-list-item">
+                  <a href="#">
+                    Контакты
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer__policy-wrap">
+            <a href="#" class="footer__policy">
+              Политика конфиденциальности
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="{% static 'js/recurring/burger.js' %}"></script>
+    {% block js %}{% endblock %}
+  </body>
+</html>

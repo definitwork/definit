@@ -1,0 +1,76 @@
+.contacts__form-title {
+  color: rgb(245, 245, 245);
+  font-family: Nunito;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 27px;
+  text-align: center;
+  margin: 30px 0;
+}
+
+.contacts__form-field-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 10px;
+
+  & input {
+    border: 1px solid rgb(245, 245, 245);
+    border-radius: 30px;
+    color: #ffff;
+    font-family: Nunito;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    padding: 19px 18px 16px 18px;
+    background: none;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.13);
+      font-family: Nunito;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 16px;
+    }
+  }
+}
+
+.contacts__form-personal-data {
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  gap: 12px;
+
+  & p {
+    color: rgb(245, 245, 245);
+    font-family: Nunito;
+    font-size: 10px;
+    font-weight: 300;
+    line-height: 14px;
+  }
+
+  & input {
+    display: none;
+  }
+
+  & div {
+    width: 10px;
+    height: 10px;
+    box-sizing: border-box;
+    border: 1px solid rgb(245, 245, 245);
+    background: rgb(30, 34, 51);
+  }
+}
+
+.contacts__form-btn {
+  border-radius: 30px;
+  background: rgb(245, 245, 245);
+  color: rgb(22, 23, 29);
+  font-family: Nunito;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19px;
+  padding: 15px 0 16px 0;
+  margin-top: 20px;
+  width: 100%;
+}

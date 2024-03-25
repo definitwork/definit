@@ -1,0 +1,220 @@
+.portfolio {
+  position: relative;
+
+  & .bg__lines {
+    &:first-child {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      transform: rotate(180deg);
+      right: initial;
+    }
+
+    &:nth-child(2) {
+      bottom: 20px;
+      top: initial;
+      transform: rotate(0deg);
+    }
+  }
+}
+
+.portfolio__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-top: 80px;
+  padding-bottom: 72px;
+}
+
+.portfolio__title {
+  color: rgb(245, 245, 245);
+  font-family: Nunito;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 35px;
+  text-align: center;
+}
+
+.portfolio__sub-title {
+  color: rgb(245, 245, 245);
+  font-family: Nunito;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: center;
+}
+
+.portfolio__title-card {
+  color: rgb(245, 245, 245);
+  font-family: Nunito;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+}
+
+.portfolio__list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.portfolio__list-item {
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px 0px rgb(15, 19, 36);
+  background: rgb(70, 79, 119);
+  padding: 5px 5px 19px 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio__list-item-img {
+  margin-bottom: 19px;
+  flex: 0 1  214px;
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+}
+
+.portfolio__list-item-link {
+  display: block;
+  color: rgb(245, 245, 245);
+  font-family: Nunito;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.porfolio__list-item-description-wrap {
+  padding: 0 12px;
+}
+
+.portfolio__list-item-description {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 16px;
+}
+
+.portfolio__list-item-description-text {
+  color: rgb(245, 245, 245);
+  font-family: Nunito;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 16px;
+  padding-left: 4px;
+}
+
+.portfolio__list-item-description-results-list-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.portfolio__list-item-description-results-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.portfolio__list-item-description-results-list-item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: rgb(245, 245, 245);
+  font-family: Nunito;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 16px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ffff;
+  }
+}
+
+.portfolio__link-all-projects {
+  color: rgb(245, 245, 245);
+  font-family: Nunito;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  margin-left: auto;
+}
+
+@media (min-width: 992px) {
+  .portfolio__title {
+    font-size: 48px;
+    line-height: 65px;
+    margin-bottom: 70px;
+  }
+
+  .portfolio__sub-title {
+    font-size: 27px;
+    line-height: 27px;
+    margin-bottom: 60px;
+  }
+
+  .portfolio__wrapper {
+    gap: initial;
+    padding: 180px 0;
+  }
+  .portfolio__list {
+    margin-bottom: 50px;
+  }
+
+  .portfolio__list-item {
+    flex-direction: row;
+    padding: initial;
+    padding-left: 60px;
+    justify-content: space-between;
+    gap: 43px;
+  }
+
+  .portfolio__list-item-img {
+    min-height: 100%;
+    order: 3;
+    flex: 0 0 468px;
+    margin: initial;
+  }
+  .porfolio__list-item-description-wrap {
+    order: 2;
+    flex: 0 1 440px;
+    padding: initial;
+    padding: 20px 0;
+    align-self: center;
+  }
+
+  .portfolio__list-item-link {
+    order: 1;
+    margin-bottom: initial;
+    font-size: 36px;
+    line-height: 49px;
+    flex: 0 1 170px;
+    align-self: center;
+  }
+
+  .portfolio__title-card {
+    color: rgb(245, 245, 245);
+    font-family: Nunito;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 33px;
+  }
+
+  .portfolio__link-all-projects {
+    color: rgb(245, 245, 245);
+    font-family: Nunito;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 27px;
+  }
+}

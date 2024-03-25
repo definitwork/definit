@@ -1,0 +1,87 @@
+.header__nav {
+  padding-top: 113px;
+  border-radius: 0px 0px 0px 5px;
+  box-shadow: 0px 4px 4px 0px rgb(15, 19, 36);
+  background: rgb(49, 56, 85);
+  position: absolute;
+  z-index: 2;
+  top: 0px;
+  left: -100%;
+  transition: 0.3s ease;
+  width: 100%;
+  justify-content: center;
+  height: 100svh;
+  overflow: auto;
+
+  &::before {
+    content: "DEFINIT TECHNOLOGIES";
+    position: absolute;
+    top: 35px;
+    right: 100px;
+    color: rgb(255, 255, 255);
+    font-family: Cabin;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17px;
+    letter-spacing: 30%;
+    text-align: center;
+  }
+}
+
+.header__nav-list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 33px;
+}
+
+.header__nav-list-item {
+  & a {
+    color: rgb(245, 245, 245);
+    font-family: Nunito;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0%;
+    text-align: center;
+  }
+}
+
+.nav__reels {
+  & a {
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 5px 11px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+}
+
+
+
+.header__nav-active {
+  display: flex;
+  left: 0;
+  transition: 0.3s ease;
+}
+
+@media (min-width:992px) {
+  .header__nav {
+    height: initial;
+    position: initial;
+    background: initial;
+    padding: initial;
+    box-shadow: initial;
+    &::before {
+      display: none;
+    }
+  }
+
+  .header__nav-list{
+    flex-direction: initial;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
