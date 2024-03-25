@@ -74,3 +74,51 @@
   margin-top: 20px;
   width: 100%;
 }
+
+@media (min-width: 992px) {
+  .contacts__form {
+    max-width: 632px;
+    padding: 80px 81px;
+    margin: 0 auto;
+    border: 5px solid rgb(245, 245, 245);
+    border-radius: 10px;
+  }
+
+  .contacts__form-title {
+    font-size: 36px;
+    line-height: 49px;
+    margin-bottom: 49px;
+    margin-top: initial;
+  }
+
+  .contacts__form-field-wrap {
+    gap: 20px;
+  }
+
+  .contacts__form-btn {
+    margin-top: 32px;
+  }
+
+  .contacts__form-field-wrap {
+    & input {
+      font-size: 20px;
+      line-height: 27px;
+      &::placeholder {
+        font-size: 20px;
+        line-height: 27px;
+      }
+    }
+  }
+
+  .contacts__form-personal-data {
+    & p {
+      font-size: 14px;
+      line-height: 19px;
+    }
+
+    & div {
+      width: 12px;
+      height: 12px;
+    }
+  }
+}
