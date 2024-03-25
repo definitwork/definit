@@ -9,8 +9,6 @@
           {% for decision in decisions %}
           <li class="about__company-expertise-item">{{ decision }}</li>
           {% endfor %}
-          <!-- <li class="about__company-expertise-item">разработка под ключ</li> -->
-          <!-- <li class="about__company-expertise-item">разработка сайтов-визиток</li> -->
         </ul>
         <button type="button" class="about__company-order">Заказать разработку</button>
       </div>
@@ -25,18 +23,11 @@
       </div>
       <h2 class="about__team-title">DEFINIT TECHNOLOGIES</h2>
       <ul class="about__team-comment-list">
-        <li class="about__team-comment-list-item comment-list-item-1">
-          Мы - команда опытных и талантливых веб-разработчиков, стремящихся создать удивительные веб-решения для наших
-          клиентов.
+        {% for about in about_company %}
+        <li class="about__team-comment-list-item comment-list-item-{{ forloop.counter }}">
+          {{ about }} 
         </li>
-        <li class="about__team-comment-list-item comment-list-item-2">
-          Наша экспертиза включает различные аспекты веб-разработки, включая фронтенд и бэкенд разработку, создание
-          пользовательского интерфейса, оптимизацию для поисковых систем, интеграцию сторонних сервисов и многое другое.
-        </li>
-        <li class="about__team-comment-list-item comment-list-item-3">
-          Если вы ищете надежного партнера для разработки вашего веб-проекта, обратитесь к нам. Мы будем рады воплотить
-          ваше веб-видение в реальность и помочь вашему бизнесу достичь новых высот в онлайн-мире.
-        </li>
+        {% endfor %}
       </ul>
     </div>
   </div>
