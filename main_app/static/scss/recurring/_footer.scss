@@ -1,9 +1,12 @@
+footer {
+    padding-top: 24px;
+    padding-bottom: 12px;
+}
+
 .footer__wrapper {
   display: flex;
   justify-content: space-between;
   gap: 30px;
-  padding-top: 24px;
-  padding-bottom: 12px;
 }
 
 .footer__logo {
@@ -51,4 +54,39 @@
   font-size: 6px;
   font-weight: 300;
   line-height: 8px;
+}
+
+@media(min-width: 992px) {
+
+    .footer__wrapper {
+        justify-content: initial;
+        gap: 220px;
+    }
+    .footer__logo {
+        max-width: 209px
+    }
+
+    .footer__nav {
+        flex: 0 1 500px;
+    }
+
+    .footer__nav-list-item  {
+        & a {
+            font-size: 20px;
+            line-height: 27px;
+        }
+    }
+
+    .footer__nav-reels-img {
+        max-width: 25px;
+    }
+    .footer__policy {
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    footer {
+        padding-bottom: 20px;
+        padding-top: 95px;
+    }
 }
