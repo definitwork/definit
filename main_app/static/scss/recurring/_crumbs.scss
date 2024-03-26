@@ -1,7 +1,12 @@
+.crumbs__nav {
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
 .crumbs__nav-list {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 5px;
 }
 
 .crumbs__nav-list-item {
@@ -9,11 +14,31 @@
     color: rgb(245, 245, 245);
     font-family: Nunito;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 19px;
+  }
+
+  &:last-child {
+    & a {
+      font-weight: 600;
+    }
   }
 }
 
 .crumbs__nav-list-item-arrow {
-    
+  max-width: 10px;
+  max-height: 15px;
+}
+
+
+@media (min-width:992px) {
+  .crumbs__nav-list {
+    gap: 20px;
+  }
+  .crumbs__nav-list-item {
+    & a {
+      font-size: 20px;
+      line-height: 27px;
+    }
+  }
 }
