@@ -23,6 +23,7 @@
 }
 
 .logo {
+  display: block;
   position: relative;
   z-index: 3;
   max-width: 47px;
@@ -68,6 +69,7 @@ footer {
 
 .footer__logo {
   max-width: 60px;
+  display: block;
 }
 
 .footer__nav {
@@ -399,7 +401,7 @@ footer {
   .about__company {
     padding-top: 55px;
     padding-bottom: 68px;
-    background: linear-gradient(180deg, rgb(30, 34, 51) 11.131%, rgba(30, 34, 51, 0) 80.449%), linear-gradient(0deg, rgb(30, 34, 51), rgba(30, 34, 51, 0) 79.097%), linear-gradient(90deg, rgb(30, 34, 51), rgba(30, 34, 51, 0) 93.263%), url(../../img/main.jpg) no-repeat 100% 100%/847px 100%;
+    background: linear-gradient(180deg, rgb(30, 34, 51) 11.131%, rgba(30, 34, 51, 0) 80.449%), linear-gradient(0deg, rgb(30, 34, 51), rgba(30, 34, 51, 0) 79.097%), linear-gradient(90.57deg, rgb(30, 34, 51) 54.537%, rgb(30, 34, 51) 5.346%, rgba(30, 34, 51, 0) 99.1%), url(../../img/main.jpg) no-repeat 100% 100%/847px 100%;
   }
   .about__company-title {
     color: rgb(245, 245, 245);
