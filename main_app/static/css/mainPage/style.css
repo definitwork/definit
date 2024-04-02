@@ -401,7 +401,7 @@ footer {
   .about__company {
     padding-top: 55px;
     padding-bottom: 68px;
-    background: linear-gradient(180deg, rgb(30, 34, 51) 11.131%, rgba(30, 34, 51, 0) 80.449%), linear-gradient(0deg, rgb(30, 34, 51), rgba(30, 34, 51, 0) 79.097%), linear-gradient(90.57deg, rgb(30, 34, 51) 54.537%, rgb(30, 34, 51) 5.346%, rgba(30, 34, 51, 0) 99.1%), url(../../img/main.jpg) no-repeat 100% 100%/847px 100%;
+    background: linear-gradient(180deg, rgb(30, 34, 51) 11.131%, rgba(30, 34, 51, 0) 80.449%), linear-gradient(0deg, rgb(30, 34, 51), rgba(30, 34, 51, 0) 79.097%), linear-gradient(90.57deg, rgb(30, 34, 51) 66.6666666667%, rgb(30, 34, 51) 5.346%, rgba(30, 34, 51, 0) 99.1%), url(../../img/main.jpg) no-repeat 100% 100%/847px 100%;
   }
   .about__company-title {
     color: rgb(245, 245, 245);
@@ -582,6 +582,41 @@ footer {
   text-align: center;
 }
 
+.portfolio__link-all-projects {
+  color: rgb(245, 245, 245);
+  font-family: Nunito;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  margin-left: auto;
+}
+
+@media (min-width: 992px) {
+  .portfolio .bg__lines:nth-child(2) {
+    bottom: 70px;
+  }
+  .portfolio__title {
+    font-size: 48px;
+    line-height: 65px;
+    margin-bottom: 70px;
+  }
+  .portfolio__sub-title {
+    font-size: 27px;
+    line-height: 27px;
+    margin-bottom: 60px;
+  }
+  .portfolio__wrapper {
+    gap: initial;
+    padding: 180px 0;
+  }
+  .portfolio__link-all-projects {
+    color: rgb(245, 245, 245);
+    font-family: Nunito;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 27px;
+  }
+}
 .portfolio__title-card {
   color: rgb(245, 245, 245);
   font-family: Nunito;
@@ -679,33 +714,7 @@ footer {
   background: white;
 }
 
-.portfolio__link-all-projects {
-  color: rgb(245, 245, 245);
-  font-family: Nunito;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 16px;
-  margin-left: auto;
-}
-
 @media (min-width: 992px) {
-  .portfolio .bg__lines:nth-child(2) {
-    bottom: 70px;
-  }
-  .portfolio__title {
-    font-size: 48px;
-    line-height: 65px;
-    margin-bottom: 70px;
-  }
-  .portfolio__sub-title {
-    font-size: 27px;
-    line-height: 27px;
-    margin-bottom: 60px;
-  }
-  .portfolio__wrapper {
-    gap: initial;
-    padding: 180px 0;
-  }
   .portfolio__list {
     margin-bottom: 50px;
   }
@@ -743,13 +752,6 @@ footer {
     font-size: 24px;
     font-weight: 400;
     line-height: 33px;
-  }
-  .portfolio__link-all-projects {
-    color: rgb(245, 245, 245);
-    font-family: Nunito;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 27px;
   }
 }
 .contacts {

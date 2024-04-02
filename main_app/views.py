@@ -49,3 +49,6 @@ def get_portfolio_page(request):
         "page_obj": page_obj
     }
     return render(request, template_name='portfolio.html', context=context)
+
+def get_team_page(request):
+    return render(request, template_name='team.html')

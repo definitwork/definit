@@ -1,68 +1,56 @@
-@import "../recurring/_container.scss";
-@import "../recurring/_header.scss";
-@import "../recurring/_headerNav.scss";
-@import "../recurring/_hederReels.scss";
-@import "../recurring/_burger.scss";
-@import "../recurring/_crumbs.scss";
-@import "../recurring/_portfolioItem.scss";
-@import "../recurring/_footer.scss";
+// @import "../recurring/_container.scss";
+// @import "../recurring/_header.scss";
+// @import "../recurring/_headerNav.scss";
+// @import "../recurring/_hederReels.scss";
+// @import "../recurring/_burger.scss";
+// @import "../recurring/_crumbs.scss";
+// @import "../recurring/_portfolioItem.scss";
+// @import "../recurring/_footer.scss";
 
-.portfolio__wrapper {
-  padding-bottom: 40px;
-}
+// .portfolio__wrapper {
+//   padding-bottom: 40px;
+// }
 
-.portfolio__title {
-  color: rgb(245, 245, 245);
-  font-family: Nunito;
-  font-size: 26px;
-  font-weight: 600;
-  line-height: 35px;
-  margin-bottom: 40px;
-  text-align: center;
-}
+// .portfolio__title {
+//   color: rgb(245, 245, 245);
+//   font-family: Nunito;
+//   font-size: 26px;
+//   font-weight: 600;
+//   line-height: 35px;
+//   margin-bottom: 40px;
+//   text-align: center;
+// }
 
-.slick-list {
-  overflow: hidden;
-}
+// .portfolio__pagination-list {
+//   display: none;
+// }
 
-.slick-track {
-  display: flex;
-}
+// @media (min-width: 992px) {
+//   .portfolio__title {
+//     font-size: 48px;
+//     line-height: 65px;
+//     margin-bottom: 70px;
+//   }
+//   .portfolio__pagination-list {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     gap: 20px;
+//   }
 
-.slick-slide {
-  margin: 0 10px;
-}
+//   .portfolio__pagination-list-item {
+//     & a {
+//       color: rgba(255, 255, 255, 0.5);
+//       font-family: Nunito;
+//       font-size: 24px;
+//       font-weight: 300;
+//       line-height: 33px;
+//     }
+//   }
 
-.portfolio__pagination-list {
-  display: none;
-}
-
-@media (min-width: 992px) {
-  .portfolio__title {
-    font-size: 48px;
-    line-height: 65px;
-    margin-bottom: 70px;
-  }
-  .portfolio__pagination-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .portfolio__pagination-list-item {
-    & a {
-      color: rgba(255, 255, 255, 0.5);
-      font-family: Nunito;
-      font-size: 24px;
-      font-weight: 300;
-      line-height: 33px;
-    }
-  }
-
-  .portfolio__pagination-active {
-    & a {
-      color: #fff;
-    }
-  }
-}
+//   .portfolio__pagination-active {
+//     & a {
+//       color: #fff;
+//     }
+//   }
+// }
