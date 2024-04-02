@@ -1,4 +1,7 @@
-/*# sourceMappingURL=style.css.map */adding: 0 10px;
+/*# sourceMappingURL=style.css.map */
+.container{
+  max-width: 1312px;
+  padding: 0 10px;
   margin: 0 auto;
 }
 

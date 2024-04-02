@@ -1,0 +1,37 @@
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track {
+  display: flex;
+}
+
+.slick-slide {
+  margin: 0 10px;
+}
+
+.slick-dots {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  & li {
+    & button {
+      font-size: 0;
+      width: 10px;
+      height: 10px;
+      background: rgba(154, 162, 195, 0.3);
+      border-radius: 50%;
+    }
+  }
+
+  & .slick-active {
+    & button {
+      background: #fff;
+    }
+  }
+}
+
+
