@@ -420,6 +420,36 @@
     line-height: 33px;
   }
 }
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track {
+  display: flex;
+}
+
+.slick-slide {
+  margin: 0 10px;
+}
+
+.slick-dots {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.slick-dots li button {
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  background: rgba(154, 162, 195, 0.3);
+  border-radius: 50%;
+}
+.slick-dots .slick-active button {
+  background: #fff;
+}
+
 footer {
   padding-top: 24px;
   padding-bottom: 12px;
@@ -517,18 +547,6 @@ footer {
   line-height: 35px;
   margin-bottom: 40px;
   text-align: center;
-}
-
-.slick-list {
-  overflow: hidden;
-}
-
-.slick-track {
-  display: flex;
-}
-
-.slick-slide {
-  margin: 0 10px;
 }
 
 .portfolio__pagination-list {
