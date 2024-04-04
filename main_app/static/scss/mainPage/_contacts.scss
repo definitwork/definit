@@ -1,8 +1,5 @@
 .contacts {
-  background: url(../../img/contactsBg.png) no-repeat 100% 100% / cover;
-}
-
-.contacts__wrapper {
+  background: url(../../img/contactsBg.png) no-repeat 100% / cover;
   padding: 20px 0;
 }
 
@@ -92,7 +89,7 @@
 }
 @media (min-width: 992px) {
 
-  .contacts__wrapper {
+  .contacts {
     padding-top: 50px;
     padding-bottom: 86px;
   }

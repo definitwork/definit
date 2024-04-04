@@ -275,6 +275,10 @@
 }
 
 @media (min-width: 992px) {
+  .crumbs__nav {
+    margin-top: 55px;
+    margin-bottom: 90px;
+  }
   .crumbs__nav-list {
     gap: 20px;
   }
@@ -382,7 +386,8 @@
 
 @media (min-width: 992px) {
   .portfolio__list {
-    margin-bottom: 50px;
+    margin-bottom: 70px;
+    gap: 60px;
   }
   .portfolio__list-item {
     flex-direction: row;
@@ -411,6 +416,9 @@
     line-height: 49px;
     flex: 0 1 170px;
     align-self: center;
+  }
+  .portfolio__list-item-description {
+    margin-bottom: 33px;
   }
   .portfolio__title-card {
     color: rgb(245, 245, 245);
@@ -453,6 +461,7 @@
 footer {
   padding-top: 24px;
   padding-bottom: 12px;
+  background: rgb(20, 23, 36);
 }
 
 .footer__wrapper {
@@ -554,6 +563,9 @@ footer {
 }
 
 @media (min-width: 992px) {
+  .portfolio__wrapper {
+    padding-bottom: 70px;
+  }
   .portfolio__title {
     font-size: 48px;
     line-height: 65px;

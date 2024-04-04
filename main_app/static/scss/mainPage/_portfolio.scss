@@ -55,6 +55,7 @@
 }
 
 @media (min-width: 992px) {
+
   .portfolio {
     & .bg__lines {
       &:nth-child(2) {
@@ -76,8 +77,9 @@
   }
 
   .portfolio__wrapper {
+    padding-top: 180px;
+    padding-bottom: 180px;
     gap: initial;
-    padding: 180px 0;
   }
 
   .portfolio__link-all-projects {

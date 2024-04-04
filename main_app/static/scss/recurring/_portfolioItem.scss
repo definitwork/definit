@@ -98,7 +98,8 @@
 
   @media (min-width:992px) {
     .portfolio__list {
-        margin-bottom: 50px;
+        margin-bottom: 70px;
+        gap: 60px;
       }
     
       .portfolio__list-item {
@@ -130,6 +131,10 @@
         line-height: 49px;
         flex: 0 1 170px;
         align-self: center;
+      }
+
+      .portfolio__list-item-description {
+        margin-bottom: 33px;
       }
     
       .portfolio__title-card {
