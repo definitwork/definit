@@ -1,5 +1,103 @@
-{% extends 'baseTemplate.html' %}
-{% load static %}
-{% block title %} Блог {% endblock %} 
-  
-{% block content %} {% endblock %}
+{% extends 'baseTemplate.html' %} {% load static %} {% block css %}
+<link rel="stylesheet" href="{% static 'css/blogPage/style.css' %}" />
+{% endblock %} {% block title %} Блог {% endblock %} {% block content %}
+<nav class="crumbs__nav">
+  <div class="container">
+    <ul class="crumbs__nav-list">
+      <li class="crumbs__nav-list-item">
+        <a href="#">Главная</a>
+      </li>
+      <li class="crumbs__nav-list-item-arrow">
+        <svg
+          width="100%"
+          height="100%"
+          viewBox="0 0 13 19"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+        >
+          <desc>Created with Pixso.</desc>
+          <defs />
+          <path
+            id="Vector"
+            d="M0.34 17.34C0.23 17.43 0.15 17.54 0.09 17.66C0.03 17.78 0 17.91 0.01 18.04C0.01 18.17 0.05 18.3 0.11 18.41C0.18 18.53 0.28 18.64 0.39 18.73C0.51 18.82 0.65 18.88 0.8 18.93C0.95 18.98 1.12 19 1.28 18.99C1.44 18.99 1.6 18.96 1.75 18.91C1.9 18.86 2.03 18.78 2.14 18.69L12.66 9.84C12.87 9.65 13 9.41 13 9.16C13 8.91 12.87 8.67 12.66 8.49L2.14 -0.37C2.03 -0.46 1.9 -0.54 1.75 -0.59C1.6 -0.65 1.44 -0.68 1.28 -0.68C1.11 -0.69 0.95 -0.67 0.8 -0.62C0.64 -0.57 0.5 -0.5 0.38 -0.41C0.26 -0.33 0.17 -0.22 0.1 -0.1C0.03 0.02 0 0.15 0 0.28C-0.01 0.41 0.02 0.54 0.08 0.66C0.14 0.78 0.23 0.89 0.34 0.98L10.06 9.16L0.34 17.34Z"
+            fill="#F5F5F5"
+            fill-opacity="1.000000"
+            fill-rule="evenodd"
+          />
+          <path
+            id="Vector"
+            d="M0.34 17.34C0.23 17.43 0.15 17.54 0.09 17.66C0.03 17.78 0 17.91 0.01 18.04C0.01 18.17 0.05 18.3 0.11 18.41C0.18 18.53 0.28 18.64 0.39 18.73C0.51 18.82 0.65 18.88 0.8 18.93C0.95 18.98 1.12 19 1.28 18.99C1.44 18.99 1.6 18.96 1.75 18.91C1.9 18.86 2.03 18.78 2.14 18.69L12.66 9.84C12.87 9.65 13 9.41 13 9.16C13 8.91 12.87 8.67 12.66 8.49L2.14 -0.37C2.03 -0.46 1.9 -0.54 1.75 -0.59C1.6 -0.65 1.44 -0.68 1.28 -0.68C1.11 -0.69 0.95 -0.67 0.8 -0.62C0.64 -0.57 0.5 -0.5 0.38 -0.41C0.26 -0.33 0.17 -0.22 0.1 -0.1C0.03 0.02 0 0.15 0 0.28C-0.01 0.41 0.02 0.54 0.08 0.66C0.14 0.78 0.23 0.89 0.34 0.98L10.06 9.16L0.34 17.34Z"
+            fill="#FFFFFF"
+            fill-opacity="0.500000"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </li>
+      <li class="crumbs__nav-list-item">
+        <a href="#">Блог</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<section class="blog">
+  <div class="container">
+    <div class="blog__wrapper">
+      <h1 class="blog__title">Блог</h1>
+      <ul class="blog__list">
+        <li class="blog__list-item">
+          <h2 class="blog__list-item-title">Backend conference</h2>
+          <div class="blog__list-item-slider">
+            <div class="blog__list-item-slider-item">
+              <img src="{% static 'img/blogImg.png' %}" alt="" />
+            </div>
+            <div class="blog__list-item-slider-item">
+              <img src="{% static 'img/blogImgTwo.png' %}" alt="" />
+            </div>
+            <div class="blog__list-item-slider-item">
+              <img src="{% static 'img/blogImgThree.png' %}" alt="" />
+            </div>
+          </div>
+          <p class="blog__list-item-text">
+            Недавно посетили конференцию для разработчиков, и это было невероятное и вдохновляющее событие. Организация
+            была безупречной, а атмосфера насыщенной знаниями и энергией. На протяжении конференции были проведены
+            множество интересных докладов и сессий, где получили массу новых идей и узнали о последних тенденциях в мире
+            веб-разработки. Ведущие специалисты отрасли делились своими знаниями и опытом, предоставляя ценные
+            практические советы. Что особенно понравилось, так это возможность пообщаться с другими разработчиками. Мы
+            встретили множество талантливых и вдохновленных людей, с которыми мы обсудили новейшие техники и
+            инструменты, а также обменялись опытом работы над проектами. Это было весьма стимулирующе и помогло
+            расширить мой кругозор. Кроме того, конференция предоставила возможность посетить выставочную площадку, где
+            мы увидели последние разработки и инновации в мире технологий. Множество компаний представили свои продукты
+            и сервисы, и это было отличной возможностью узнать больше о том, что доступно на рынке. В целом, посещение
+            этой конференции было весьма полезным и вдохновляющим опытом.
+          </p>
+          <p class="blog__list-item-text-full">
+            Показать еще
+          </p>
+          <p class="work__create-date">
+            01.01.2024
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<div class="bg__lines">
+  <img src="{% static 'img/icons/bgLines.svg' %}" alt="">
+</div>
+<section class="work">
+  <div class="container">
+    <div class="work__wrapper">
+      <h2 class="work__title">
+        Рабочий момент
+      </h2>
+      <video src="" controls="true" class="work__video"></video>
+      <p class="work__description">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus sit doloremque sapiente recusandae, architecto aut deserunt temporibus neque nesciunt et omnis quam odio quos accusantium vel perspiciatis consequuntur culpa est.
+      </p>
+    </div>
+  </div>
+</section>
+{% endblock %} {% block js %}
+<script defer src="{% static 'js/recurring/slider.js' %}"></script>
+{% endblock %}

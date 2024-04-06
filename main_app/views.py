@@ -52,3 +52,6 @@ def get_portfolio_page(request):
 
 def get_team_page(request):
     return render(request, template_name='team.html')
+
+def get_blog_page(request):
+    return render(request, template_name='blog.html')
