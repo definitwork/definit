@@ -46,21 +46,13 @@
       <h1 class="about__title">DEFINIT TECHNOLOGIES</h1>
       <div class="about__info-list-wrap">
         <ul class="about__info-list">
+          {% for about in about_company|slice:":3" %}
           <li class="about__info-list-item">
             <p>
-              {{ about_company.0 }}
+              {{ about }}
             </p>
           </li>
-          <li class="about__info-list-item">
-            <p>
-              {{ about_company.1 }}
-            </p>
-          </li>
-          <li class="about__info-list-item">
-            <p>
-              {{ about_company.2 }}
-            </p>
-          </li>
+          {% endfor %}
         </ul>
         <div class="about__info-img">
           <img src="{% static 'img/aboutImage.png' %}" alt="aboutImage" />
