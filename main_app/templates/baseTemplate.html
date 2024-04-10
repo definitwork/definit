@@ -15,19 +15,19 @@
         <div class="container">
           <div class="header__wrapper">
             <div class="header__mob-wrap">
-              <a href="#" class="logo">
+              <a href="{% url 'main' %}" class="logo">
                 <img src="{% static 'img/icons/logoIcon.svg' %}" alt="logoIcon" />
               </a>
               <nav class="header__nav">
                 <ul class="header__nav-list">
                   <li class="header__nav-list-item">
-                    <a href="#"> О нас </a>
+                    <a href="{% url 'about' %}"> О нас </a>
                   </li>
                   <li class="header__nav-list-item">
-                    <a href="#"> Портфолио </a>
+                    <a href="{% url 'portfolio' %}"> Портфолио </a>
                   </li>
                   <li class="header__nav-list-item">
-                    <a href="#"> Команда </a>
+                    <a href="{% url 'team' %}"> Команда </a>
                   </li>
                   <li class="header__nav-list-item">
                     <a href="#"> Блог </a>
@@ -54,7 +54,7 @@
                     />
                   </div>
                 </div>
-                <a href="tel:+375291111111" class="header__phone">
+                <a href="tel:{{ info_and_contacts.phone_number }}" class="header__phone">
                   <div class="header__phone-img">
                     <svg
                       width="27.000000"
@@ -95,7 +95,7 @@
                       </g>
                     </svg>
                   </div>
-                  <p class="header__phone-text">+375291111111</p>
+                  <p class="header__phone-text">{{ info_and_contacts.phone_number }}</p>
                 </a>
               </div>
             </div>
@@ -111,7 +111,7 @@
       <footer>
         <div class="container">
           <div class="footer__wrapper">
-            <a href="#" class="footer__logo">
+            <a href="{% url 'main' %}" class="footer__logo">
               <svg
                 width="100%"
                 height="100%"
@@ -162,15 +162,15 @@
             <nav class="footer__nav">
               <ul class="footer__nav-list">
                 <li class="footer__nav-list-item">
-                  <a href="#"> О нас </a>
+                  <a href="{% url 'about' %}"> О нас </a>
                 </li>
                 <li class="footer__nav-list-item">
-                  <a href="#"> Портфолио </a>
+                  <a href="{% url 'portfolio' %}"> Портфолио </a>
                 </li>
               </ul>
               <ul class="footer__nav-list">
                 <li class="footer__nav-list-item">
-                  <a href="#"> Команда </a>
+                  <a href="{% url 'team' %}"> Команда </a>
                 </li>
                 <li class="footer__nav-list-item">
                   <a href="#"> Блог </a>

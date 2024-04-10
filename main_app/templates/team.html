@@ -9,7 +9,7 @@
     <div class="container">
       <ul class="crumbs__nav-list">
         <li class="crumbs__nav-list-item">
-          <a href="#"> Главная </a>
+          <a href="{% url 'main' %}"> Главная </a>
         </li>
         <li class="crumbs__nav-list-item-arrow">
           <svg
@@ -39,7 +39,7 @@
           </svg>
         </li>
         <li class="crumbs__nav-list-item">
-          <a href="#">Команда</a>
+          <a href="{% url 'team' %}">Команда</a>
         </li>
       </ul>
     </div>
