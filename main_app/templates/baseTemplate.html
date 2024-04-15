@@ -11,6 +11,11 @@
   </head>
   <body>
     <div class="wrapper">
+      <div class="modals">
+        <div class="reels__modal">
+          <video src="" preload="none"></video>
+        </div>
+      </div>
       <header>
         <div class="container">
           <div class="header__wrapper">
@@ -199,7 +204,8 @@
     </div>
     <script src="{% static 'js/recurring/burger.js' %}"></script>
     <script defer src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script defer src="{% static 'js/recurring/slick.min.js' %}"></script>    
+    <script defer src="{% static 'js/recurring/slick.min.js' %}"></script>   
+    <script src="{% static 'js/recurring/reels.js' %}"></script> 
     {% block js %}{% endblock %}
   </body>
 </html>
