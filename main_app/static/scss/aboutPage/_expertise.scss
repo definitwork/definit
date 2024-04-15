@@ -1,5 +1,31 @@
+.expertise {
+  position: relative;
+  &::before {
+    content: '';
+    display: block;
+    width: 121px;
+    height: 13px;
+    position: absolute;
+    background: url(../../img/icons/bgLines.svg) no-repeat 100% 100% / 100% 100%;
+    top: 40px;
+    left: 0;
+    transform: rotate3d(0, 15, 1, 180deg);
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    width: 121px;
+    height: 13px;
+    position: absolute;
+    background: url(../../img/icons/bgLines.svg) no-repeat 100% 100% / 100% 100%;
+    bottom: 40px;
+    right: 0;
+  }
+}
+
 .expertise__wrapper {
-  padding-top: 93px;
+  padding: 93px 0;
 }
 
 .expertise__title {
@@ -29,7 +55,7 @@
   flex-direction: column;
   max-height: 57px;
   overflow: hidden;
-  transition: .3s ease;
+  transition: 0.3s ease;
   gap: 23px;
 }
 
@@ -69,21 +95,59 @@
 .expertise__item-active {
   box-shadow: 0px 4px 4px 0px rgb(15, 19, 36);
   background: rgb(49, 56, 85);
-  transition: .5s ease;
+  transition: 0.5s ease;
   max-height: 5000px;
-//   overflow: auto;
+  //   overflow: auto;
 
   & .expertise__list-item-img {
     transform: rotate(0deg);
   }
 }
 
+@media (min-width: 992px) {
 
-@media(min-width:992px) {
-    .expertise__list {
-        flex-direction: initial;
+  .expertise {
+    &::before {
+      width: 420px;
+      height: 48px;
+      top: 50px;
     }
-    .expertise__list-item {
-        flex:  0 1 442px;
+    &::after{
+      width: 420px;
+      height: 48px;
+      bottom: 50px;
     }
-} 
+  }
+
+  .expertise__wrapper {
+    padding: 148px 0;
+  }
+  .expertise__title {
+    font-size: 36px;
+    line-height: 49px;
+    margin-bottom: 50px;
+  }
+
+  .expertise__list-item-title {
+    font-size: 20px;
+    line-height: 27px;
+  }
+
+  .expertise__list-item-drop {
+    font-size: 20px;
+    line-height: 27px;
+    padding: 0 12px;
+    padding-bottom: 7px;
+  }
+
+  .expertise__list-item {
+    padding: 16px 8px 17px 8px;
+  }
+
+  .expertise__list {
+    flex-direction: initial;
+  }
+  .expertise__list-item {
+    flex: 0 1 442px;
+  }
+}

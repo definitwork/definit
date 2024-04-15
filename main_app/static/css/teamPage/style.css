@@ -275,6 +275,10 @@
 }
 
 @media (min-width: 992px) {
+  .crumbs__nav {
+    margin-top: 55px;
+    margin-bottom: 90px;
+  }
   .crumbs__nav-list {
     gap: 20px;
   }
@@ -381,6 +385,7 @@
 footer {
   padding-top: 24px;
   padding-bottom: 12px;
+  background: rgb(20, 23, 36);
 }
 
 .footer__wrapper {
@@ -485,6 +490,10 @@ footer {
   margin-bottom: 30px;
 }
 
+main {
+  padding-bottom: 40px;
+}
+
 .seo {
   margin-bottom: 40px;
 }
@@ -508,10 +517,6 @@ footer {
   width: 290px;
 }
 
-main {
-  padding-bottom: 40px;
-}
-
 @media (min-width: 992px) {
   .team__title {
     font-size: 48px;
@@ -521,9 +526,12 @@ main {
   .employer__list-item {
     width: initial;
   }
+  main {
+    padding-bottom: 140px;
+  }
   .employer__list {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
     gap: 60px 96px;
   }
   .team__sub-title {

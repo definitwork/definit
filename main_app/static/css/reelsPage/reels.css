@@ -287,175 +287,28 @@
     line-height: 27px;
   }
 }
-.portfolio__title-card {
-  color: rgb(245, 245, 245);
-  font-family: Nunito;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 19px;
+.modals {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100svh;
+  background: rgba(255, 255, 255, 0.62);
+  z-index: 5;
+  display: none;
+  align-items: center;
+  justify-content: center;
 }
 
-.portfolio__list {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+.reels__modal {
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  max-height: 827px;
 }
-
-.portfolio__list-item {
-  border-radius: 10px;
-  box-shadow: 0px 4px 4px 0px rgb(15, 19, 36);
-  background: rgb(70, 79, 119);
-  padding: 5px 5px 19px 5px;
-  display: flex;
-  flex-direction: column;
-}
-
-.portfolio__list-item-img {
-  margin-bottom: 19px;
-  flex: 0 1 214px;
-}
-.portfolio__list-item-img img {
+.reels__modal video {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 10px;
-}
-
-.portfolio__list-item-link {
-  display: block;
-  color: rgb(245, 245, 245);
-  font-family: Nunito;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 27px;
-  text-align: center;
-  margin-bottom: 18px;
-}
-
-.porfolio__list-item-description-wrap {
-  padding: 0 12px;
-}
-
-.portfolio__list-item-description {
-  display: flex;
-  flex-direction: column;
-  gap: 9px;
-  margin-bottom: 16px;
-}
-
-.portfolio__list-item-description-text {
-  color: rgb(245, 245, 245);
-  font-family: Nunito;
-  font-size: 12px;
-  font-weight: 300;
-  line-height: 16px;
-  padding-left: 4px;
-}
-
-.portfolio__list-item-description-results-list-wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 9px;
-}
-
-.portfolio__list-item-description-results-list {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.portfolio__list-item-description-results-list-item {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  color: rgb(245, 245, 245);
-  font-family: Nunito;
-  font-size: 12px;
-  font-weight: 300;
-  line-height: 16px;
-}
-.portfolio__list-item-description-results-list-item::before {
-  content: "";
-  display: block;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: white;
-}
-
-@media (min-width: 992px) {
-  .portfolio__list {
-    margin-bottom: 70px;
-    gap: 60px;
-  }
-  .portfolio__list-item {
-    flex-direction: row;
-    padding: initial;
-    padding-left: 60px;
-    justify-content: space-between;
-    gap: 43px;
-  }
-  .portfolio__list-item-img {
-    min-height: 100%;
-    order: 3;
-    flex: 0 0 468px;
-    margin: initial;
-  }
-  .porfolio__list-item-description-wrap {
-    order: 2;
-    flex: 0 1 440px;
-    padding: initial;
-    padding: 20px 0;
-    align-self: center;
-  }
-  .portfolio__list-item-link {
-    order: 1;
-    margin-bottom: initial;
-    font-size: 36px;
-    line-height: 49px;
-    flex: 0 1 170px;
-    align-self: center;
-  }
-  .portfolio__list-item-description {
-    margin-bottom: 33px;
-  }
-  .portfolio__title-card {
-    color: rgb(245, 245, 245);
-    font-family: Nunito;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 33px;
-  }
-}
-.slick-list {
-  overflow: hidden;
-}
-
-.slick-track {
-  display: flex;
-}
-
-.slick-slide {
-  margin: 0 10px;
-}
-
-.slick-dots {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-.slick-dots li button {
-  font-size: 0;
-  width: 10px;
-  height: 10px;
-  background: rgba(154, 162, 195, 0.3);
-  border-radius: 50%;
-}
-.slick-dots .slick-active button {
-  background: #fff;
 }
 
 footer {
@@ -544,11 +397,7 @@ footer {
     padding-top: 95px;
   }
 }
-.portfolio__wrapper {
-  padding-bottom: 40px;
-}
-
-.portfolio__title {
+.reels__title {
   color: rgb(245, 245, 245);
   font-family: Nunito;
   font-size: 26px;
@@ -558,33 +407,83 @@ footer {
   text-align: center;
 }
 
-.portfolio__pagination-list {
-  display: none;
+.reels__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+  grid-auto-rows: 175px;
+  row-gap: 40px;
+}
+
+.reels__list-item {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  position: relative;
+}
+.reels__list-item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.reels__list-item::before {
+  -webkit-user-select: inherit;
+     -moz-user-select: inherit;
+          user-select: inherit;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(../../img/icons/play.svg) no-repeat 50% 50%/18px 25px;
+  cursor: pointer;
+}
+
+.reels__wrapper {
+  margin-bottom: 23px;
+}
+
+.reels__more {
+  display: inline-block;
+  color: rgb(245, 245, 245);
+  font-family: Nunito;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  margin-top: 25px;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+.reels__wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-width: 992px) {
-  .portfolio__wrapper {
-    padding-bottom: 70px;
-  }
-  .portfolio__title {
+  .reels__title {
     font-size: 48px;
     line-height: 65px;
-    margin-bottom: 70px;
+    margin-bottom: 80px;
   }
-  .portfolio__pagination-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+  .reels__list {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 60px;
+    grid-auto-rows: 450px;
   }
-  .portfolio__pagination-list-item a {
-    color: rgba(255, 255, 255, 0.5);
-    font-family: Nunito;
-    font-size: 24px;
-    font-weight: 300;
-    line-height: 33px;
+  .reels__list-item::before {
+    background-size: 65px 85px;
   }
-  .portfolio__pagination-active a {
-    color: #fff;
+  .reels__more {
+    font-size: 20px;
+    line-height: 27px;
+    margin-top: 50px;
   }
-}/*# sourceMappingURL=style.css.map */
+  .reels__wrapper {
+    margin-bottom: 60px;
+  }
+}/*# sourceMappingURL=reels.css.map */

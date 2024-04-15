@@ -6,7 +6,7 @@ $(document).ready(function () {
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        dots:true,
+        dots: true,
       });
     }
   }
@@ -18,8 +18,20 @@ $(document).ready(function () {
         variableWidth: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        dots:true,
+        dots: true,
       });
     }
+  }
+  if (window.location.href === "http://127.0.0.1:8000/blog/") {
+    $(".blog__list-item-slider").slick({
+      arrows: false,
+      infinite: false,
+      variableWidth: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: true,
+      centerMode: true,
+      centerPadding: '0px'
+    });
   }
 });

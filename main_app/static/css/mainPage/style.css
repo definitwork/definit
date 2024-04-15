@@ -59,6 +59,7 @@ header {
 footer {
   padding-top: 24px;
   padding-bottom: 12px;
+  background: rgb(20, 23, 36);
 }
 
 .footer__wrapper {
@@ -606,8 +607,9 @@ footer {
     margin-bottom: 60px;
   }
   .portfolio__wrapper {
+    padding-top: 180px;
+    padding-bottom: 180px;
     gap: initial;
-    padding: 180px 0;
   }
   .portfolio__link-all-projects {
     color: rgb(245, 245, 245);
@@ -716,7 +718,8 @@ footer {
 
 @media (min-width: 992px) {
   .portfolio__list {
-    margin-bottom: 50px;
+    margin-bottom: 70px;
+    gap: 60px;
   }
   .portfolio__list-item {
     flex-direction: row;
@@ -746,6 +749,9 @@ footer {
     flex: 0 1 170px;
     align-self: center;
   }
+  .portfolio__list-item-description {
+    margin-bottom: 33px;
+  }
   .portfolio__title-card {
     color: rgb(245, 245, 245);
     font-family: Nunito;
@@ -755,10 +761,7 @@ footer {
   }
 }
 .contacts {
-  background: url(../../img/contactsBg.png) no-repeat 100% 100%/cover;
-}
-
-.contacts__wrapper {
+  background: url(../../img/contactsBg.png) no-repeat 100%/cover;
   padding: 20px 0;
 }
 
@@ -844,7 +847,7 @@ footer {
 }
 
 @media (min-width: 992px) {
-  .contacts__wrapper {
+  .contacts {
     padding-top: 50px;
     padding-bottom: 86px;
   }

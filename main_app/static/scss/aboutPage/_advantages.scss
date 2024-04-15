@@ -73,6 +73,11 @@ $advantages-item-count: 10;
 }
 
 @media (min-width: 992px) {
+  .advantages__wrapper {
+    padding-top: 0;
+    padding-bottom: 50px;
+  }
+
   .advantages__title {
     font-size: 36px;
     line-height: 49px;
