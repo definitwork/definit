@@ -10,7 +10,7 @@ def get_main_page(request):
     info_and_contacts = CompanyInfoAndContacts.objects.first()
     about_company = AboutCompany.objects.all()
     decisions = CompanyDecisions.objects.all()
-    projects = CompanyProjects.objects.prefetch_related("projectresults_set")
+    projects = CompanyProjects.objects.prefetch_related("projectresults_set")[:2]
     context = {
         "info_and_contacts": info_and_contacts,
         "about_company": about_company,
