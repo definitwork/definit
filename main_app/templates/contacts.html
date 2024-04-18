@@ -56,7 +56,6 @@
         <div class="contacts__list-map-wrap">
           <div class="contacts__list-wrap">
             <ul class="contacts__list">
-              {% for contact in info_and_contacts %}
               <li class="contacts__list-item">
                 <h3 class="contacts__list-item-title">Офис</h3>
                 <div class="contacts__list-item-wrap">
@@ -64,29 +63,28 @@
                     <div class="contacts__list-item-time-img">
                       <img src="{% static 'img/icons/clockIcon.svg' %}" alt="" />
                     </div>
-                    <p>{{ contact.opening_hours }}</p>
+                    <p>{{ info_and_contacts.opening_hours }}</p>
                   </div>
                   <div class="contacts__list-item-adress contacts__info">
                     <div class="contacts__list-item-adress-img">
                       <img src="{% static 'img/icons/locationIcon.svg' %}" alt="" />
                     </div>
-                    <p>{{ contact.address }}</p>
+                    <p>{{ info_and_contacts.address }}</p>
                   </div>
                   <div class="contacts__list-item-phone contacts__info">
                     <div class="contacts__list-item-phone-img">
                       <img src="{% static 'img/icons/phoneIcon.svg' %}" alt="" />
                     </div>
-                    <p>{{ contact.phone_number }}</p>
+                    <p>{{ info_and_contacts.phone_number }}</p>
                   </div>
                   <div class="contacts__list-item-email contacts__info">
                     <div class="contacts__list-item-email-img">
                       <img src="{% static 'img/icons/mailIcon.svg' %}" alt="" />
                     </div>
-                    <p>{{ contact.email }}</p>
+                    <p>{{ info_and_contacts.email }}</p>
                   </div>
                 </div>
               </li>
-              {% endfor %}
             </ul>
             <ul class="contacts__social-list">
               <li class="contacts__social-list-item">
