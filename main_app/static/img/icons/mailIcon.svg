@@ -1,16 +1,13 @@
-<svg width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<desc>
 			Created with Pixso.
 	</desc>
 	<defs>
-		<clipPath id="clip101_447">
-			<rect id="Mail" width="20.000000" height="20.000000" fill="white" fill-opacity="0"/>
+		<clipPath id="clip101_418">
+			<rect id="Mail" width="24.000000" height="24.000000" fill="white" fill-opacity="0"/>
 		</clipPath>
 	</defs>
-	<g clip-path="url(#clip101_447)">
-		<path id="path" d="M18.33 16.25L18.33 10L18.33 3.75L10 3.75L1.66 3.75L1.66 10L1.66 16.25L18.33 16.25Z" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="1.500000" stroke-linejoin="round"/>
-		<path id="path" d="M1.66 3.75L10 10L18.33 " stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="1.500000" stroke-linejoin="round" stroke-linecap="round"/>
-		<path id="path" d="M10 3.75L1.66 3.75L1.66 " stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="1.500000" stroke-linejoin="round" stroke-linecap="round"/>
-		<path id="path" d="M18.33 10L18.33 3.75L10 " stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="1.500000" stroke-linejoin="round" stroke-linecap="round"/>
+	<g clip-path="url(#clip101_418)">
+		<path id="Union" d="M22.75 12L22.75 19.5C22.75 19.6035 22.7317 19.6995 22.6951 19.7878L22.6951 19.7879C22.6584 19.8763 22.6035 19.9571 22.5303 20.0303C22.457 20.1036 22.3762 20.1584 22.2878 20.1951L22.2878 20.1951C22.1995 20.2317 22.1035 20.25 22 20.25L2 20.25C1.89648 20.25 1.80054 20.2317 1.71216 20.1951L1.71216 20.1951C1.62378 20.1584 1.54297 20.1036 1.46973 20.0303C1.39648 19.9571 1.34155 19.8763 1.30493 19.7879C1.26831 19.6995 1.25 19.6036 1.25 19.5L1.25 4.56793C1.24219 4.48108 1.24976 4.3927 1.27344 4.30664C1.28174 4.27423 1.29224 4.24268 1.30493 4.2121L1.30493 4.2121L1.30493 4.2121C1.33618 4.13684 1.38062 4.06702 1.43823 4.00275L1.43823 4.00275C1.60107 3.8172 1.83374 3.72949 2.06323 3.75L21.9365 3.75C22.1653 3.72955 22.3965 3.81628 22.5593 4C22.6182 4.06506 22.6633 4.13574 22.6951 4.21204L22.6951 4.2121L22.6953 4.21259C22.7083 4.24396 22.719 4.27631 22.7273 4.30963C22.7502 4.39453 22.7576 4.48169 22.75 4.56732L22.75 12ZM21.25 12L21.25 5.99994L12.45 12.6C12.3167 12.7 12.1667 12.75 12 12.75C11.8333 12.75 11.6833 12.7 11.55 12.6L2.75 6L2.75 12L2.75 18.75L21.25 18.75L21.25 12ZM19.75 5.25L4.25 5.25L12 11.0625L19.75 5.25Z" clip-rule="evenodd" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
 	</g>
 </svg>
