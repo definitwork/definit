@@ -1,8 +1,11 @@
 from django.db import models
+from django.forms import ValidationError
 
 
-# Используется на Главной, Контакты и на всех остальных (берем название компании на О нас и номер телефона в хедере)
+# Используется на Главной, Контакты и на всех остальных (берем название
+# компании на О нас и номер телефона в хедере)
 class CompanyInfoAndContacts(models.Model):
+    """Информация о компании и контакты"""
     company_name = models.CharField(max_length=255, verbose_name="Название компании")
     slogan = models.TextField(verbose_name="Девиз компании")
     opening_hours = models.CharField(max_length=50, verbose_name="Время работы")
@@ -16,6 +19,14 @@ class CompanyInfoAndContacts(models.Model):
 
     def __str__(self):
         return self.company_name
+
+    def clean(self):
+        """Проверка некоторых полей модели."""
+        # Проверяем есть ли уже запись в модели или нет
+        if (CompanyInfoAndContacts.objects.exists() and not CompanyInfoAndContacts.objects.values(
+                "company_name")[0]["company_name"] == self.company_name):
+            raise ValidationError(
+                "У компании может быть только один адрес, отредактируйте уже существующую.")
 
 
 # Используется на странице Главная
@@ -59,7 +70,7 @@ class CompanyProjects(models.Model):
 
 # Используется на страницах Главная и Портфолио
 class ProjectResults(models.Model):
-    project = models.ForeignKey('CompanyProjects', on_delete=models.CASCADE, verbose_name="Проект")
+    project = models.ForeignKey("CompanyProjects", on_delete=models.CASCADE, verbose_name="Проект")
     result = models.CharField(max_length=255, verbose_name="Результат по проекту")
 
     class Meta:
@@ -94,3 +105,16 @@ class CompanyAdvantages(models.Model):
 
     def __str__(self):
         return self.advantage
+
+
+class Employees(models.Model):
+    photo = models.ImageField(upload_to="./employees_img", verbose_name="Фото сотрудника")
+    name = models.CharField(max_length=255, verbose_name="ФИО сотрудника")
+    job_title = models.CharField(max_length=255, verbose_name="Должность сотрудника")
+
+    class Meta:
+        verbose_name = "Сотрудника"
+        verbose_name_plural = "Сотрудники"
+
+    def __str__(self):
+        return f'{self.name} - {self.job_title}'

@@ -1,6 +1,7 @@
 from django.contrib import admin
-from main_app.models import CompanyInfoAndContacts, CompanyDecisions, AboutCompany, CompanyProjects, ProjectResults, \
-    CompanyExpertise, CompanyAdvantages
+from main_app.models import (CompanyInfoAndContacts, CompanyDecisions, AboutCompany,
+                             CompanyProjects, Employees, ProjectResults,
+                             CompanyExpertise, CompanyAdvantages)
 
 
 @admin.register(CompanyInfoAndContacts)
@@ -16,14 +17,12 @@ class CompanyInfoAndContactsAdmin(admin.ModelAdmin):
 
 @admin.register(CompanyDecisions)
 class CompanyDecisionsAdmin(admin.ModelAdmin):
-    list_display = ("decision",
-                    )
+    list_display = ("decision",)
 
 
 @admin.register(AboutCompany)
 class AboutCompanyAdmin(admin.ModelAdmin):
-    list_display = ("info_block",
-                    )
+    list_display = ("info_block",)
 
 
 @admin.register(CompanyProjects)
@@ -50,5 +49,9 @@ class CompanyExpertiseAdmin(admin.ModelAdmin):
 
 @admin.register(CompanyAdvantages)
 class CompanyAdvantagesAdmin(admin.ModelAdmin):
-    list_display = ("advantage",
-                    )
+    list_display = ("advantage",)
+
+
+@admin.register(Employees)
+class EmployeesAdmin(admin.ModelAdmin):
+    list_display = ("name", "job_title")
