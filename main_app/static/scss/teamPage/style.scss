@@ -1,0 +1,91 @@
+@import "../recurring/_slider.scss";
+@import "./_teamItem.scss";
+
+.team__title {
+  color: rgb(245, 245, 245);
+  font-family: Nunito;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 35px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.team__sub-title {
+  color: rgb(245, 245, 245);
+  font-family: Nunito;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: center;
+  max-width: 300px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+main{
+  padding-bottom: 40px;
+}
+
+.seo {
+  margin-bottom: 40px;
+}
+
+.seo__wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.employer__title {
+  color: rgb(245, 245, 245);
+  font-family: Nunito;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 27px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.employer__list-item {
+  width: 290px;
+}
+
+
+@media (min-width: 992px) {
+  .team__title {
+    font-size: 48px;
+    line-height: 65px;
+    margin-bottom: 80px;
+  }
+
+  .employer__list-item {
+    width: initial;
+  }
+
+  main{
+    padding-bottom: 140px;
+  }
+
+  .employer__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 60px 96px;
+  }
+
+  .team__sub-title {
+    font-size: 20px;
+    line-height: 27px;
+    max-width: 700px;
+    margin-bottom: 80px;
+  }
+
+  .seo {
+    margin-bottom: 70px;
+  }
+
+  .employer__title {
+    font-size: 36px;
+    line-height: 49px;
+    margin-bottom: 60px;
+  }
+}

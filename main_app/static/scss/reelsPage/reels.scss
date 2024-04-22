@@ -1,0 +1,91 @@
+
+.reels__title {
+  color: rgb(245, 245, 245);
+  font-family: Nunito;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 35px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.reels__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  column-gap: 15px;
+  grid-auto-rows: 175px;
+  row-gap: 40px;
+}
+
+.reels__list-item {
+  user-select: none;
+  position: relative;
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &::before {
+    user-select: inherit;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../../img/icons/play.svg) no-repeat 50% 50% / 18px 25px;
+    cursor: pointer;
+  }
+}
+
+.reels__wrapper {
+  margin-bottom: 23px;
+}
+
+.reels__more {
+  display: inline-block;
+  color: rgb(245, 245, 245);
+  font-family: Nunito;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  margin-top: 25px;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+.reels__wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 992px) {
+  .reels__title {
+    font-size: 48px;
+    line-height: 65px;
+    margin-bottom: 80px;
+  }
+
+  .reels__list {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 60px;
+    grid-auto-rows: 450px;
+  }
+
+  .reels__list-item {
+    &::before {
+      background-size: 65px 85px;
+    }
+  }
+
+  .reels__more{
+    font-size: 20px;
+    line-height: 27px;
+    margin-top: 50px;
+  }
+  
+  .reels__wrapper {
+    margin-bottom: 60px;
+  }
+}

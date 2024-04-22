@@ -1,0 +1,141 @@
+{% extends 'baseTemplate.html' %} {% load static %} {% block css %}
+<link rel="stylesheet" href="{% static 'css/aboutPage/style.css' %}" />
+{% endblock %} {% block title %} О нас {% endblock %} {% block content %}
+<nav class="crumbs__nav">
+  <div class="container">
+    <ul class="crumbs__nav-list">
+      <li class="crumbs__nav-list-item">
+        <a href="{% url 'main' %}"> Главная </a>
+      </li>
+      <li class="crumbs__nav-list-item-arrow">
+        <svg
+          width="100%"
+          height="100%"
+          viewBox="0 0 13 19"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+        >
+          <desc>Created with Pixso.</desc>
+          <defs />
+          <path
+            id="Vector"
+            d="M0.34 17.34C0.23 17.43 0.15 17.54 0.09 17.66C0.03 17.78 0 17.91 0.01 18.04C0.01 18.17 0.05 18.3 0.11 18.41C0.18 18.53 0.28 18.64 0.39 18.73C0.51 18.82 0.65 18.88 0.8 18.93C0.95 18.98 1.12 19 1.28 18.99C1.44 18.99 1.6 18.96 1.75 18.91C1.9 18.86 2.03 18.78 2.14 18.69L12.66 9.84C12.87 9.65 13 9.41 13 9.16C13 8.91 12.87 8.67 12.66 8.49L2.14 -0.37C2.03 -0.46 1.9 -0.54 1.75 -0.59C1.6 -0.65 1.44 -0.68 1.28 -0.68C1.11 -0.69 0.95 -0.67 0.8 -0.62C0.64 -0.57 0.5 -0.5 0.38 -0.41C0.26 -0.33 0.17 -0.22 0.1 -0.1C0.03 0.02 0 0.15 0 0.28C-0.01 0.41 0.02 0.54 0.08 0.66C0.14 0.78 0.23 0.89 0.34 0.98L10.06 9.16L0.34 17.34Z"
+            fill="#F5F5F5"
+            fill-opacity="1.000000"
+            fill-rule="evenodd"
+          />
+          <path
+            id="Vector"
+            d="M0.34 17.34C0.23 17.43 0.15 17.54 0.09 17.66C0.03 17.78 0 17.91 0.01 18.04C0.01 18.17 0.05 18.3 0.11 18.41C0.18 18.53 0.28 18.64 0.39 18.73C0.51 18.82 0.65 18.88 0.8 18.93C0.95 18.98 1.12 19 1.28 18.99C1.44 18.99 1.6 18.96 1.75 18.91C1.9 18.86 2.03 18.78 2.14 18.69L12.66 9.84C12.87 9.65 13 9.41 13 9.16C13 8.91 12.87 8.67 12.66 8.49L2.14 -0.37C2.03 -0.46 1.9 -0.54 1.75 -0.59C1.6 -0.65 1.44 -0.68 1.28 -0.68C1.11 -0.69 0.95 -0.67 0.8 -0.62C0.64 -0.57 0.5 -0.5 0.38 -0.41C0.26 -0.33 0.17 -0.22 0.1 -0.1C0.03 0.02 0 0.15 0 0.28C-0.01 0.41 0.02 0.54 0.08 0.66C0.14 0.78 0.23 0.89 0.34 0.98L10.06 9.16L0.34 17.34Z"
+            fill="#FFFFFF"
+            fill-opacity="0.500000"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </li>
+      <li class="crumbs__nav-list-item">
+        <a href="{% url 'about' %}"> О нас </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<section class="about">
+  <div class="container">
+    <div class="about__wrapper">
+      <h1 class="about__title">DEFINIT TECHNOLOGIES</h1>
+      <div class="about__info-list-wrap">
+        <ul class="about__info-list">
+          {% for about in about_company|slice:":3" %}
+          <li class="about__info-list-item">
+            <p>
+              {{ about }}
+            </p>
+          </li>
+          {% endfor %}
+        </ul>
+        <div class="about__info-img">
+          <img src="{% static 'img/aboutImage.png' %}" alt="aboutImage" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="expertise">
+  <div class="container">
+    <div class="expertise__wrapper">
+      <h2 class="expertise__title">Наша экспертиза</h2>
+      <ul class="expertise__list">
+        {% for expertise in expertise %}
+        <li class="expertise__list-item">
+          <div class="expertise__list-item-wrap">
+            <h3 class="expertise__list-item-title">{{ expertise.stack }}</h3>
+            <div class="expertise__list-item-img">
+              <svg
+                width="100%"
+                height="100%"
+                viewBox="0 0 25 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <desc>Created with Pixso.</desc>
+                <defs>
+                  <clipPath id="clip101_647">
+                    <rect id="fe:arrow-up" width="25.000000" height="24.000000" fill="white" fill-opacity="0" />
+                  </clipPath>
+                </defs>
+                <rect id="fe:arrow-up" width="25.000000" height="24.000000" fill="#FFFFFF" fill-opacity="0" />
+                <g clip-path="url(#clip101_647)">
+                  <path
+                    id="Vector"
+                    d="M4.16 15L12.5 7L20.83 15L18.75 17L12.5 11L6.24 17L4.16 15Z"
+                    fill="#F5F5F5"
+                    fill-opacity="1.000000"
+                    fill-rule="evenodd"
+                  />
+                  <path
+                    id="Vector"
+                    d="M4.16 15L12.5 7L20.83 15L18.75 17L12.5 11L6.24 17L4.16 15Z"
+                    fill="#FFFFFF"
+                    fill-opacity="0.500000"
+                    fill-rule="evenodd"
+                  />
+                </g>
+              </svg>
+            </div>
+          </div>
+          <p class="expertise__list-item-drop">
+            {{ expertise.description }}
+          </p>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+<section class="advantages">
+  <div class="container">
+    <div class="advantages__wrapper">
+      <h2 class="advantages__title">
+        Наши преимущества
+      </h2>
+      <ul class="advantages__list">
+        {% for advantages in advantages %}
+          <li class="advantages__list-item">
+            <h3>
+              {{ advantages }}
+            </h3>
+            <p>
+              {{ advantages.description }}
+            </p>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+{% endblock %}
+{% block js %}
+<script src="{% static 'js/aboutPage/expertise.js' %}"></script>
+{% endblock %}

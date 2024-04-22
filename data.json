@@ -1,0 +1,253 @@
+[
+    {
+        "model": "main_app.companyinfoandcontacts",
+        "pk": 1,
+        "fields": {
+            "company_name": "Definit Technologies",
+            "slogan": "Создаем веб-решения, которые вдохнут жизнь в ваш бизнес",
+            "opening_hours": "Пн.-Пт. 9:00-18:00",
+            "address": "г. Минск, ул. Мележа 1, к. 213",
+            "phone_number": "+375(29)1112233",
+            "email": "definit-technologies@yandex.by"
+        }
+    },
+    {
+        "model": "main_app.companydecisions",
+        "pk": 1,
+        "fields": { "decision": "Разработка web-приложений в сегменте B2B" }
+    },
+    {
+        "model": "main_app.companydecisions",
+        "pk": 2,
+        "fields": { "decision": "Разработка web-приложений в сегменте B2C" }
+    },
+    {
+        "model": "main_app.companydecisions",
+        "pk": 3,
+        "fields": { "decision": "Разработка сайтов-визиток" }
+    },
+    {
+        "model": "main_app.aboutcompany",
+        "pk": 1,
+        "fields": {
+            "info_block": "Мы - команда молодых и талантливых веб-разработчиков, стремящихся создать удивительные веб-решения для наших клиентов."
+        }
+    },
+    {
+        "model": "main_app.aboutcompany",
+        "pk": 2,
+        "fields": {
+            "info_block": "Наша экспертиза включает такие аспекты веб-разработки, как фронтенд и бэкенд разработку, создание пользовательского интерфейса, оптимизацию для поисковых систем, интеграцию сторонних сервисов и многое другое."
+        }
+    },
+    {
+        "model": "main_app.aboutcompany",
+        "pk": 3,
+        "fields": {
+            "info_block": "Если Вы ищете надежного партнера для разработки Вашего веб-проекта, обратитесь к нам. Мы будем рады воплотить Ваше веб-видение в реальность и помочь Вашему бизнесу достичь новых высот в онлайн-мире."
+        }
+    },
+    {
+        "model": "main_app.companyprojects",
+        "pk": 1,
+        "fields": {
+            "project_name": "Документация человека",
+            "description": "Проект, посвященный изучению, осмыслению, анализу разных аспектов функционирования человека в окружающей его действительности",
+            "image": "project_img/documentation.jpg",
+            "link": "#"
+        }
+    },
+    {
+        "model": "main_app.companyprojects",
+        "pk": 2,
+        "fields": {
+            "project_name": "Домер.бел",
+            "description": "Общебелорусская доска объявлений",
+            "image": "project_img/domer.jpg",
+            "link": "https://xn--d1acuhm.xn--90ais/"
+        }
+    },
+    {
+        "model": "main_app.companyprojects",
+        "pk": 3,
+        "fields": {
+            "project_name": "Территория Zoo",
+            "description": "Маркетплейс для обучения тестировщиков в IT-академии Stormnet",
+            "image": "project_img/terrzoo.jpg",
+            "link": "https://mystormnet.by/"
+        }
+    },
+    {
+        "model": "main_app.projectresults",
+        "pk": 1,
+        "fields": {
+            "project": 1,
+            "result": "С нуля спроектирован дизайн сайта"
+        }
+    },
+    {
+        "model": "main_app.projectresults",
+        "pk": 2,
+        "fields": {
+            "project": 1,
+            "result": "Реализована возможность ведения блога"
+        }
+    },
+    {
+        "model": "main_app.projectresults",
+        "pk": 3,
+        "fields": { "project": 1, "result": "Сайт в разработке" }
+    },
+    {
+        "model": "main_app.projectresults",
+        "pk": 4,
+        "fields": {
+            "project": 2,
+            "result": "Проведен полный аудит сайта и построена новая структура данных"
+        }
+    },
+    {
+        "model": "main_app.projectresults",
+        "pk": 5,
+        "fields": {
+            "project": 2,
+            "result": "Бэкенд заново реализован с нуля на Django"
+        }
+    },
+    {
+        "model": "main_app.projectresults",
+        "pk": 6,
+        "fields": { "project": 2, "result": "Сайт в разработке" }
+    },
+    {
+        "model": "main_app.projectresults",
+        "pk": 7,
+        "fields": {
+            "project": 3,
+            "result": "Учебный сайт полностью спроектирован как полноценный маркетплейс"
+        }
+    },
+    {
+        "model": "main_app.projectresults",
+        "pk": 8,
+        "fields": { "project": 3, "result": "Сайт запущен" }
+    },
+    {
+        "model": "main_app.companyexpertise",
+        "pk": 1,
+        "fields": {
+            "stack": "Backend",
+            "description": "Реализация бэкэнда на Python, Django, Django Rest Framewrok"
+        }
+    },
+    {
+        "model": "main_app.companyexpertise",
+        "pk": 2,
+        "fields": {
+            "stack": "Frontend",
+            "description": "Реализация пользовательского интерфейса посредством HTML, CSS, JavaScript"
+        }
+    },
+    {
+        "model": "main_app.companyexpertise",
+        "pk": 3,
+        "fields": {
+            "stack": "Databases",
+            "description": "Работа с СУБД PostgreSQL"
+        }
+    },
+    {
+        "model": "main_app.companyadvantages",
+        "pk": 1,
+        "fields": {
+            "advantage": "Стремление к новому опыту",
+            "description": "Наша команда состоит из молодых и талантливых разработчиков, которые с огромным рвением стремятся осваивать и применять лучшие практики, современные технологии и инструменты, чтобы обеспечить высокое качество выполнения проектов."
+        }
+    },
+    {
+        "model": "main_app.companyadvantages",
+        "pk": 2,
+        "fields": {
+            "advantage": "Качество и результативность",
+            "description": "Мы стремимся к высокому качеству во всем, что делаем. Наша команда следует передовым стандартам и процессам разработки, чтобы обеспечить эффективность и успех Вашего проекта."
+        }
+    },
+    {
+        "model": "main_app.companyadvantages",
+        "pk": 3,
+        "fields": {
+            "advantage": "Индивидуальный подход",
+            "description": "Мы понимаем, что каждый проект уникален. Мы тесно сотрудничаем с Вами, чтобы полностью понять Ваши требования и ожидания, а затем разрабатываем решение, которое отражает Вашу уникальность и ценности."
+        }
+    },
+    {
+        "model": "main_app.companyadvantages",
+        "pk": 4,
+        "fields": {
+            "advantage": "Соблюдение сроков и бюджетов",
+            "description": "Мы понимаем важность соблюдения сроков и бюджетов проекта. Мы уделяем внимание планированию и управлению проектом, чтобы обеспечить его выполнение вовремя и в рамках предусмотренных средств."
+        }
+    },
+    {
+        "model": "main_app.companyadvantages",
+        "pk": 5,
+        "fields": {
+            "advantage": "Долгосрочное сотрудничество",
+            "description": "Мы строим отношения с нашими клиентами на основе долгосрочного сотрудничества и партнерства. Мы готовы поддерживать и развивать Ваш веб-проект в долгосрочной перспективе, обеспечивая его актуальность и эффективность."
+        }
+    },
+    {
+        "model": "main_app.employees",
+        "pk": 1,
+        "fields": {
+            "photo": "employees_img/Я.jpg",
+            "name": "Добыш Константин Викторович",
+            "job_title": "Технический директор"
+        }
+    },
+    {
+        "model": "main_app.employees",
+        "pk": 2,
+        "fields": {
+            "photo": "employees_img/bander.jpg",
+            "name": "Johan",
+            "job_title": "Директор компании"
+        }
+    },
+    {
+        "model": "main_app.employees",
+        "pk": 3,
+        "fields": {
+            "photo": "employees_img/лена.png",
+            "name": "Елена Панасюк Михайловна",
+            "job_title": "Зам. Директора по качеству"
+        }
+    },
+    {
+        "model": "main_app.employees",
+        "pk": 4,
+        "fields": {
+            "photo": "employees_img/Глава_клана.png",
+            "name": "Юнчиц Алексей Федорович",
+            "job_title": "Наше Все!"
+        }
+    },
+    {
+        "model": "main_app.employees",
+        "pk": 5,
+        "fields": {
+            "photo": "employees_img/Артем.png",
+            "name": "Артем Юнчиц",
+            "job_title": "CSS Senior"
+        }
+    },
+    {
+        "model": "main_app.employees",
+        "pk": 6,
+        "fields": {
+            "photo": "employees_img/Саша.png",
+            "name": "Поведайко Александр Дмитриевич",
+            "job_title": "Зам. директора по обучению"
+        }
+    }
+]

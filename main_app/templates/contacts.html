@@ -1,0 +1,135 @@
+{% extends 'baseTemplate.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/contactsPage/contacts.css' %}" />
+{% endblock %}
+
+{% block title %}
+Контакты
+{% endblock %}
+
+{% block content %}
+<nav class="crumbs__nav">
+    <div class="container">
+      <ul class="crumbs__nav-list">
+        <li class="crumbs__nav-list-item">
+          <a href="{% url 'main' %}">Главная</a>
+        </li>
+        <li class="crumbs__nav-list-item-arrow">
+          <svg
+            width="100%"
+            height="100%"
+            viewBox="0 0 13 19"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <desc>Created with Pixso.</desc>
+            <defs />
+            <path
+              id="Vector"
+              d="M0.34 17.34C0.23 17.43 0.15 17.54 0.09 17.66C0.03 17.78 0 17.91 0.01 18.04C0.01 18.17 0.05 18.3 0.11 18.41C0.18 18.53 0.28 18.64 0.39 18.73C0.51 18.82 0.65 18.88 0.8 18.93C0.95 18.98 1.12 19 1.28 18.99C1.44 18.99 1.6 18.96 1.75 18.91C1.9 18.86 2.03 18.78 2.14 18.69L12.66 9.84C12.87 9.65 13 9.41 13 9.16C13 8.91 12.87 8.67 12.66 8.49L2.14 -0.37C2.03 -0.46 1.9 -0.54 1.75 -0.59C1.6 -0.65 1.44 -0.68 1.28 -0.68C1.11 -0.69 0.95 -0.67 0.8 -0.62C0.64 -0.57 0.5 -0.5 0.38 -0.41C0.26 -0.33 0.17 -0.22 0.1 -0.1C0.03 0.02 0 0.15 0 0.28C-0.01 0.41 0.02 0.54 0.08 0.66C0.14 0.78 0.23 0.89 0.34 0.98L10.06 9.16L0.34 17.34Z"
+              fill="#F5F5F5"
+              fill-opacity="1.000000"
+              fill-rule="evenodd"
+            />
+            <path
+              id="Vector"
+              d="M0.34 17.34C0.23 17.43 0.15 17.54 0.09 17.66C0.03 17.78 0 17.91 0.01 18.04C0.01 18.17 0.05 18.3 0.11 18.41C0.18 18.53 0.28 18.64 0.39 18.73C0.51 18.82 0.65 18.88 0.8 18.93C0.95 18.98 1.12 19 1.28 18.99C1.44 18.99 1.6 18.96 1.75 18.91C1.9 18.86 2.03 18.78 2.14 18.69L12.66 9.84C12.87 9.65 13 9.41 13 9.16C13 8.91 12.87 8.67 12.66 8.49L2.14 -0.37C2.03 -0.46 1.9 -0.54 1.75 -0.59C1.6 -0.65 1.44 -0.68 1.28 -0.68C1.11 -0.69 0.95 -0.67 0.8 -0.62C0.64 -0.57 0.5 -0.5 0.38 -0.41C0.26 -0.33 0.17 -0.22 0.1 -0.1C0.03 0.02 0 0.15 0 0.28C-0.01 0.41 0.02 0.54 0.08 0.66C0.14 0.78 0.23 0.89 0.34 0.98L10.06 9.16L0.34 17.34Z"
+              fill="#FFFFFF"
+              fill-opacity="0.500000"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </li>
+        <li class="crumbs__nav-list-item">
+          <a href="{% url 'contacts' %}">Контакты</a>
+        </li>
+      </ul>
+    </div>
+</nav>
+<section class="contacts">
+    <div class="container">
+      <div class="contacts__wrapper">
+        <h2 class="contacts__title">Наши контакты</h2>
+        <div class="contacts__list-map-wrap">
+          <div class="contacts__list-wrap">
+            <ul class="contacts__list">
+              <li class="contacts__list-item">
+                <h3 class="contacts__list-item-title">Офис</h3>
+                <div class="contacts__list-item-wrap">
+                  <div class="contacts__list-item-time contacts__info">
+                    <div class="contacts__list-item-time-img">
+                      <img src="{% static 'img/icons/clockIcon.svg' %}" alt="" />
+                    </div>
+                    <p>{{ info_and_contacts.opening_hours }}</p>
+                  </div>
+                  <div class="contacts__list-item-adress contacts__info">
+                    <div class="contacts__list-item-adress-img">
+                      <img src="{% static 'img/icons/locationIcon.svg' %}" alt="" />
+                    </div>
+                    <p>{{ info_and_contacts.address }}</p>
+                  </div>
+                  <div class="contacts__list-item-phone contacts__info">
+                    <div class="contacts__list-item-phone-img">
+                      <img src="{% static 'img/icons/phoneIcon.svg' %}" alt="" />
+                    </div>
+                    <p>{{ info_and_contacts.phone_number }}</p>
+                  </div>
+                  <div class="contacts__list-item-email contacts__info">
+                    <div class="contacts__list-item-email-img">
+                      <img src="{% static 'img/icons/mailIcon.svg' %}" alt="" />
+                    </div>
+                    <p>{{ info_and_contacts.email }}</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <ul class="contacts__social-list">
+              <li class="contacts__social-list-item">
+                <a href="#">
+                  <img src="{% static 'img/icons/viberIcon.svg' %}" alt="" />
+                </a>
+              </li>
+              <li class="contacts__social-list-item">
+                <a href="#">
+                  <img src="{% static 'img/icons/telegramIcon.svg' %}" alt="" />
+                </a>
+              </li>
+              <li class="contacts__social-list-item">
+                <a href="#">
+                  <img src="{% static 'img/icons/whatsappIcon.svg' %}" alt="whatsappIcon" />
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="contacts__list-map">
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad9325862c7c1f714f01612e6ece210cd00b887901095a5ac7c529c9d0569dddc&amp;source=constructor"
+              width="100%"
+              height="100%"
+              frameborder="0"
+            ></iframe>
+          </div>
+        </div>
+        <form class="contacts__form" method="POST">
+          <h3 class="contacts__form-title">Свяжитесь с нами</h3>
+          <div class="contacts__form-field-wrap">
+            <input type="text" name="name" placeholder="Ваше имя" class="contacts__form-field" />
+            <input type="tel" name="phone" placeholder="Телефон" class="contacts__form-field" />
+          </div>
+          <label class="contacts__form-personal-data">
+            <input type="checkbox" name="personalData" id="" />
+            <div class="contacts__form-personal-data-checkbox"></div>
+            <p>Даю согласие на обработку персональных данных</p>
+          </label>
+          <button class="contacts__form-btn">Заказать звонок</button>
+        </form>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+
+{% block js %}
+{% endblock %}
