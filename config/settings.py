@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     "debug_toolbar",
     "rest_framework",
     "corsheaders",
+    'django_dump_load_utf8',
 
     'main_app',
 ]
@@ -78,12 +79,12 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': env_keys.get('POSTGRES_DB_NAME'),
+        'ENGINE': env_keys.get("SQL_ENGINE", "django.db.backends.sqlite3"),
+        'NAME': env_keys.get('POSTGRES_DB_NAME', os.path.join(BASE_DIR, "db.sqlite3")),
         'USER': env_keys.get('DB_USERNAME'),
         'PASSWORD': env_keys.get('DB_PASSWORD'),
         'HOST': 'localhost',
-        'PORT': '',
+        'PORT': '5432',
     }
 }
 
