@@ -140,6 +140,7 @@
         </div>
       </div>
       <form class="contacts__form" method="POST">
+        {% csrf_token %}
         <h3 class="contacts__form-title">Свяжитесь с нами</h3>
         <div class="contacts__form-field-wrap">
           <input type="text" name="name" placeholder="Ваше имя" class="contacts__form-field" />
@@ -150,7 +151,7 @@
           <div class="contacts__form-personal-data-checkbox"></div>
           <p>Даю согласие на обработку персональных данных</p>
         </label>
-        <button class="contacts__form-btn">Заказать звонок</button>
+        <button type="button" class="contacts__form-btn">Заказать звонок</button>
       </form>
     </div>
   </div>
