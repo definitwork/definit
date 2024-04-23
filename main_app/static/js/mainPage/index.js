@@ -1,5 +1,5 @@
 const callbackBtn = document.querySelector(".contacts__form-btn");
-const callbackForm = document.querySelector(".contacts__form")
+const callbackForm = document.querySelector(".contacts__form");
 
 callbackBtn.addEventListener("click", () => {
     const form = document.querySelector(".contacts__form");
@@ -29,11 +29,11 @@ callbackBtn.addEventListener("click", () => {
             }
         })
         .then((data) => {
-            console.log('www');
+            console.log('all ok');
             nameUser.value = "";
             phoneUser.value = "";
         })
         .catch((error) => {
-            console.log('qqq');
+            console.log('error');
         });
 });
