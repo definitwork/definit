@@ -1,4 +1,5 @@
 const callbackBtn = document.querySelector(".contacts__form-btn");
+const callbackForm = document.querySelector(".contacts__form")
 
 callbackBtn.addEventListener("click", () => {
     const form = document.querySelector(".contacts__form");
@@ -28,13 +29,11 @@ callbackBtn.addEventListener("click", () => {
             }
         })
         .then((data) => {
-            callbackForm.classList.remove("modal__active");
-            accessCallback.classList.add("modal__active");
+            console.log('www');
             nameUser.value = "";
             phoneUser.value = "";
         })
         .catch((error) => {
-            callbackForm.classList.remove("modal__active");
-            errorCallback.classList.add("modal__active");
+            console.log('qqq');
         });
 });
