@@ -1,5 +1,8 @@
+import json
 from django.core.paginator import Paginator
+from django.http import JsonResponse
 from django.shortcuts import render
+from main_app.functions import send_telegram_message
 from main_app.models import (CompanyInfoAndContacts, CompanyDecisions,AboutCompany,
                              CompanyProjects, CompanyExpertise, CompanyAdvantages,
                              Employees)
@@ -93,3 +96,29 @@ def get_contacts_page(request):
         "info_and_contacts": info_and_contacts,
     }
     return render(request, template_name='contacts.html', context=context)
+
+
+def callback(request):
+    """ Отправляем данные в ТГ бота для обратной связи """
+    if request.method == 'POST':
+        try:
+            data = json.loads(request.body)
+            name_user = data.get('name_user')
+            phone_number_user = data.get('phone_number_user')
+
+            if name_user == '' or phone_number_user == '':
+                raise ValueError("Некорректные данные")
+
+            # Отправка данных в бота Telegram
+            bot_token = '7053287159:AAHmnyY9PQus0e1tID9s0zGDEbHjpP-MwGk'
+            chat_id = '540697966'
+            message = f'Имя: {name_user}\nТелефон: {phone_number_user}'
+            send_telegram_message(bot_token, chat_id, message)
+
+            return JsonResponse({'message': 'Данные успешно получены'})
+        except json.JSONDecodeError:
+            return JsonResponse({'message': 'Ошибка при декодировании JSON'}, status=400)
+        except ValueError as e:
+            return JsonResponse({'message': str(e)}, status=400)
+    else:
+        return JsonResponse({'message': 'Метод не разрешен'}, status=405)
